@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="mac,教程,环境," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Mac的全部环境装到你欲仙欲死">
+<meta name="keywords" content="mac,教程,环境">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac的全部环境配置从零到满足">
+<meta property="og:url" content="http://yoursite.com/2018/02/02/Mac的全部环境配置从零到满足/index.html">
+<meta property="og:site_name" content="Sotyoyo">
+<meta property="og:description" content="Mac的全部环境装到你欲仙欲死">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-02-02T11:39:14.306Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac的全部环境配置从零到满足">
+<meta name="twitter:description" content="Mac的全部环境装到你欲仙欲死">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/02/02/Mac的全部环境配置从零到满足/"/>
+
+
+
+
+
+  <title>Mac的全部环境配置从零到满足 | Sotyoyo</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sotyoyo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/Mac的全部环境配置从零到满足/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Mac的全部环境配置从零到满足</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T19:12:21+08:00">
+                2018-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Mac的全部环境装到你欲仙欲死</p>
+<a id="more"></a>
+<h1 id="准备好一切的软件，工具等"><a href="#准备好一切的软件，工具等" class="headerlink" title="准备好一切的软件，工具等"></a>准备好一切的软件，工具等</h1><ol>
+<li><p>JDK 1.8 <a href="http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html" target="_blank" rel="noopener">http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html</a></p>
+</li>
+<li><p>Mysql 5.7.21 <a href="https://dev.mysql.com/downloads/file/?id=475582" target="_blank" rel="noopener">https://dev.mysql.com/downloads/file/?id=475582</a></p>
+<p>注：一定要选择dmg的那个版本</p>
+</li>
+<li><p>Maven 3.5.2 <a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">http://maven.apache.org/download.cgi</a></p>
+</li>
+<li><p>Tomcat 8和8.5 <a href="https://tomcat.apache.org/download-80.cgi" target="_blank" rel="noopener">https://tomcat.apache.org/download-80.cgi</a></p>
+</li>
+<li><p><strong>ShodowsocksX-NG</strong> <a href="https://github.com/shadowsocks/ShadowsocksX-NG/releases/" target="_blank" rel="noopener">https://github.com/shadowsocks/ShadowsocksX-NG/releases/</a></p>
+</li>
+<li><p>Eclipse EE <a href="https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R2/eclipse-inst-mac64.tar.gz" target="_blank" rel="noopener">https://www.eclipse.org/downloads/download.php?file=/oomph/epp/oxygen/R2/eclipse-inst-mac64.tar.gz</a></p>
+<p>注：下载的只是eclipse的安装器，完成后打开会提示给你一个版本选择下载安装。</p>
+</li>
+<li><p><strong>Sougou mac</strong> <a href="https://pinyin.sogou.com/mac/" target="_blank" rel="noopener">https://pinyin.sogou.com/mac/</a></p>
+</li>
+<li><p>Sublime text 3 <a href="http://www.sdifen.com/sublimetext3.html" target="_blank" rel="noopener">http://www.sdifen.com/sublimetext3.html</a></p>
+</li>
+<li><p><strong>Chrome</strong> <a href="http://www.google.cn/chrome/browser/desktop/" target="_blank" rel="noopener">http://www.google.cn/chrome/browser/desktop/</a></p>
+<p>注：谷歌浏览器就下载百度搜索出来的，官网的太正宗！</p>
+</li>
+</ol>
+<h1 id="开始重装系统！"><a href="#开始重装系统！" class="headerlink" title="开始重装系统！"></a>开始重装系统！</h1><ol>
+<li><p>备份好数据</p>
+</li>
+<li><p>关机状态，按住<code>option</code>+<code>command</code>+<code>R</code>再按一下开机键</p>
+</li>
+<li><p>进入选择最后一个磁盘工具</p>
+</li>
+<li><p>看清楚，抹除上面的那个磁盘，名字为Macintosh HD ，完成后关掉返回刚刚那个界面</p>
+</li>
+<li><p>选择第二个重新安装os，然后傻瓜化操作</p>
+</li>
+<li><p><strong>允许任何源</strong> ： <code>sudo spctl --master-disable</code></p>
+</li>
+<li><p>打开系统偏好设置</p>
+<blockquote>
+<p>语言与地区 ：设置24小时制</p>
+<p>键盘快捷键 ：把切换输入法设置成 command + space 把截图切换成shift+command+space</p>
+<p>触控板 ： 轻点来点按 勾选</p>
+<p>鼠标 ：滚动方向自然 取消勾选</p>
+</blockquote>
+</li>
+</ol>
+<h1 id="安装环境"><a href="#安装环境" class="headerlink" title="安装环境"></a>安装环境</h1><ol>
+<li><p>JDK 双击正常安装，不需要配置环境变量</p>
+</li>
+<li><p>Sublime 正常安装 (再安装package install ,emmet)</p>
+</li>
+<li><p>Tomcat 解压到 ~/envir/tomcat</p>
+</li>
+<li><p>Maven 解压到 ~/envir/maven 并且创建本地仓库</p>
+<ul>
+<li>配置请见我的另外一篇博客 <code>mac环境下配置maven ssm项目</code>&lt;&gt;</li>
+</ul>
+</li>
+<li><p>安装brew</p>
+</li>
+<li><p>安装iterm2</p>
+<ul>
+<li><p>下载地址：<a href="https://www.iterm2.com/" target="_blank" rel="noopener">https://www.iterm2.com/</a></p>
+</li>
+<li><p>设置窗口透明度：</p>
+<p>Preferences -&gt; Profiles -&gt; Window -&gt; Window Appearance 设置 Transparency</p>
+</li>
+</ul>
+</li>
+<li><p>安装zsh</p>
+<ul>
+<li><p>sh -c “$(curl -fsSL <a href="https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh" target="_blank" rel="noopener">https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh</a>)”</p>
+</li>
+<li><p>配置：</p>
+<ol>
+<li><p><code>vim ~/.zshrc</code>先按字母键大写 <strong>G</strong>（跳至文件末尾），再按下字母键小写 <strong>o</strong></p>
+<p>输入 <code>source ~/.bash_profile</code>，最后保存退出。</p>
+</li>
+<li><p><code>source ~/.zshrc</code></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>安装node.js</p>
+<ul>
+<li><p><code>brew install node</code></p>
+</li>
+<li><p>Npm配置淘宝镜像：</p>
+<ol>
+<li><code>vim ~/.npmrc</code></li>
+<li>先按<strong>i</strong>进入编辑模式，然后输入：<br>  <code>registry=https://registry.npm.taobao.org</code></li>
+<li><code>source ~/.zshrc</code></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>安装git</p>
+<ul>
+<li><code>brew install git</code></li>
+<li><code>git config --global user.name &quot;Sotyoyo&quot;</code></li>
+<li><code>git config --global user.email &quot;Sotyoyo@icloud.com&quot;</code></li>
+</ul>
+</li>
+<li><p>安装<strong>ssh</strong></p>
+<ul>
+<li><code>brew install ssh-copy-id</code></li>
+<li><code>ssh-keygen -t rsa -C &quot;Sotyoyo@icloud.com&quot;</code></li>
+</ul>
+</li>
+<li><p>npm安装一些工具(<strong>全局</strong>)</p>
+<ul>
+<li><code>npm install -g hexo-cli</code></li>
+<li><code>npm install -g vue-cli</code></li>
+</ul>
+</li>
+<li><p><strong>mysql安装</strong></p>
+<ul>
+<li>正常安装</li>
+<li>弹出一个警告框，复制下面信息(每个人的信息不一样)<br><code>2018-01-31T08:39:54.742853Z 1 [Note]</code><br><code>A temporary password is generated for root@localhost: ioroD7Y=xDP&amp;</code><br>最后面的就是你的密码</li>
+<li>修改mysql 的 root@localhost 密码。<ol>
+<li>打开系统设置，下面有一个mysql 保证mysql为running状态。</li>
+<li><code>touch ~/.bash_profile</code></li>
+<li><code>sudo vim ~/.bash_profile</code><br>加一行<code>export PATH=${PATH}:/usr/local/mysql/bin</code>保存退出</li>
+<li>source ~/.bash_profile</li>
+<li>mysql -uroot -p ,然后将安装的时候保存的随机密码粘贴进去回车。</li>
+<li>SET PASSWORD FOR ‘root’@’localhost’ = PASSWORD(‘root’);<br>修改密码成功!</li>
+</ol>
+</li>
+<li>修改mysql 的数据库默认编码方式。<ol>
+<li><code>cd /etc</code></li>
+<li><code>sudo vim my.cnf</code><br>打开后粘贴下面的内容，一会给出。</li>
+<li><code>:wq!</code>     –保存后强制退出.<br>[附几个编辑命令:dd   删除光标所在行; dw   删除一个字(word); x   删除当前字符].</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br></pre></td><td class="code"><pre><span class="line"># 下面是你应该粘贴的内容:</span><br><span class="line">(不包括这一行及上面一行)</span><br><span class="line"># Example MySQL config file for medium systems. </span><br><span class="line"># </span><br><span class="line"># This is for a system with little memory (32M - 64M) where MySQL plays </span><br><span class="line"># an important part, or systems up to 128M where MySQL is used together with </span><br><span class="line"># other programs (such as a web server) </span><br><span class="line"># </span><br><span class="line"># MySQL programs look for option files in a set of </span><br><span class="line"># locations which depend on the deployment platform. </span><br><span class="line"># You can copy this option file to one of those </span><br><span class="line"># locations. For information about these locations, see: </span><br><span class="line"># http://dev.mysql.com/doc/mysql/en/option-files.html </span><br><span class="line"># </span><br><span class="line"># In this file, you can use all long options that a program supports. </span><br><span class="line"># If you want to know which options a program supports, run the program </span><br><span class="line"># with the &quot;--help&quot; option. </span><br><span class="line"># The following options will be passed to all MySQL clients </span><br><span class="line">[client]</span><br><span class="line">default-character-set=utf8</span><br><span class="line">#password = your_password </span><br><span class="line">port = 3306 </span><br><span class="line">socket = /tmp/mysql.sock </span><br><span class="line"># Here follows entries for some specific programs </span><br><span class="line"># The MySQL server </span><br><span class="line">[mysqld]</span><br><span class="line">character-set-server=utf8</span><br><span class="line">init_connect=&apos;SET NAMES utf8</span><br><span class="line">port = 3306 </span><br><span class="line">socket = /tmp/mysql.sock </span><br><span class="line">skip-external-locking </span><br><span class="line">key_buffer_size = 16M </span><br><span class="line">max_allowed_packet = 1M </span><br><span class="line">table_open_cache = 64 </span><br><span class="line">sort_buffer_size = 512K </span><br><span class="line">net_buffer_length = 8K </span><br><span class="line">read_buffer_size = 256K </span><br><span class="line">read_rnd_buffer_size = 512K </span><br><span class="line">myisam_sort_buffer_size = 8M </span><br><span class="line">character-set-server=utf8 </span><br><span class="line">init_connect=&apos;SET NAMES utf8&apos; </span><br><span class="line"># Don&apos;t listen on a TCP/IP port at all. This can be a security enhancement, </span><br><span class="line"># if all processes that need to connect to mysqld run on the same host. </span><br><span class="line"># All interaction with mysqld must be made via Unix sockets or named pipes. </span><br><span class="line"># Note that using this option without enabling named pipes on Windows </span><br><span class="line"># (via the &quot;enable-named-pipe&quot; option) will render mysqld useless! </span><br><span class="line"># </span><br><span class="line">#skip-networking</span><br><span class="line">    </span><br><span class="line"># Replication Master Server (default) </span><br><span class="line"># binary logging is required for replication </span><br><span class="line">log-bin=mysql-bin</span><br><span class="line">    </span><br><span class="line"># binary logging format - mixed recommended </span><br><span class="line">binlog_format=mixed</span><br><span class="line">    </span><br><span class="line"># required unique id between 1 and 2^32 - 1 </span><br><span class="line"># defaults to 1 if master-host is not set </span><br><span class="line"># but will not function as a master if omitted </span><br><span class="line">server-id = 1</span><br><span class="line">    </span><br><span class="line"># Replication Slave (comment out master section to use this) </span><br><span class="line"># </span><br><span class="line"># To configure this host as a replication slave, you can choose between </span><br><span class="line"># two methods : </span><br><span class="line"># </span><br><span class="line"># 1) Use the CHANGE MASTER TO command (fully described in our manual) - </span><br><span class="line"># the syntax is: </span><br><span class="line"># </span><br><span class="line"># CHANGE MASTER TO MASTER_HOST=&lt;host&gt;, MASTER_PORT=&lt;port&gt;, </span><br><span class="line"># MASTER_USER=&lt;user&gt;, MASTER_PASSWORD=&lt;password&gt; ; </span><br><span class="line"># </span><br><span class="line"># where you replace &lt;host&gt;, &lt;user&gt;, &lt;password&gt; by quoted strings and </span><br><span class="line"># &lt;port&gt; by the master&apos;s port number (3306 by default). </span><br><span class="line"># </span><br><span class="line"># Example: </span><br><span class="line"># </span><br><span class="line"># CHANGE MASTER TO MASTER_HOST=&apos;125.564.12.1&apos;, MASTER_PORT=3306, </span><br><span class="line"># MASTER_USER=&apos;joe&apos;, MASTER_PASSWORD=&apos;secret&apos;; </span><br><span class="line"># </span><br><span class="line"># OR </span><br><span class="line"># </span><br><span class="line"># 2) Set the variables below. However, in case you choose this method, then </span><br><span class="line"># start replication for the first time (even unsuccessfully, for example </span><br><span class="line"># if you mistyped the password in master-password and the slave fails to </span><br><span class="line"># connect), the slave will create a master.info file, and any later </span><br><span class="line"># change in this file to the variables&apos; values below will be ignored and </span><br><span class="line"># overridden by the content of the master.info file, unless you shutdown </span><br><span class="line"># the slave server, delete master.info and restart the slaver server. </span><br><span class="line"># For that reason, you may want to leave the lines below untouched </span><br><span class="line"># (commented) and instead use CHANGE MASTER TO (see above) </span><br><span class="line"># </span><br><span class="line"># required unique id between 2 and 2^32 - 1 </span><br><span class="line"># (and different from the master) </span><br><span class="line"># defaults to 2 if master-host is set </span><br><span class="line"># but will not function as a slave if omitted </span><br><span class="line">#server-id = 2 </span><br><span class="line"># </span><br><span class="line"># The replication master for this slave - required </span><br><span class="line">#master-host = &lt;hostname&gt; </span><br><span class="line"># </span><br><span class="line"># The username the slave will use for authentication when connecting </span><br><span class="line"># to the master - required </span><br><span class="line">#master-user = &lt;username&gt; </span><br><span class="line"># </span><br><span class="line"># The password the slave will authenticate with when connecting to </span><br><span class="line"># the master - required </span><br><span class="line">#master-password = &lt;password&gt; </span><br><span class="line"># </span><br><span class="line"># The port the master is listening on. </span><br><span class="line"># optional - defaults to 3306 </span><br><span class="line">#master-port = &lt;port&gt; </span><br><span class="line"># </span><br><span class="line"># binary logging - not required for slaves, but recommended </span><br><span class="line">#log-bin=mysql-bin</span><br><span class="line">    </span><br><span class="line"># Uncomment the following if you are using InnoDB tables </span><br><span class="line">#innodb_data_home_dir = /usr/local/mysql/data </span><br><span class="line">#innodb_data_file_path = ibdata1:10M:autoextend </span><br><span class="line">#innodb_log_group_home_dir = /usr/local/mysql/data </span><br><span class="line"># You can set .._buffer_pool_size up to 50 - 80 % </span><br><span class="line"># of RAM but beware of setting memory usage too high </span><br><span class="line">#innodb_buffer_pool_size = 16M </span><br><span class="line">#innodb_additional_mem_pool_size = 2M </span><br><span class="line"># Set .._log_file_size to 25 % of buffer pool size </span><br><span class="line">#innodb_log_file_size = 5M </span><br><span class="line">#innodb_log_buffer_size = 8M </span><br><span class="line">#innodb_flush_log_at_trx_commit = 1 </span><br><span class="line">#innodb_lock_wait_timeout = 50</span><br><span class="line">    </span><br><span class="line">[mysqldump] </span><br><span class="line">quick </span><br><span class="line">max_allowed_packet = 16M</span><br><span class="line">    </span><br><span class="line">[mysql] </span><br><span class="line">no-auto-rehash </span><br><span class="line"># Remove the next comment character if you are not familiar with SQL </span><br><span class="line">#safe-updates </span><br><span class="line">default-character-set=utf8</span><br><span class="line">    </span><br><span class="line">[myisamchk] </span><br><span class="line">key_buffer_size = 20M </span><br><span class="line">sort_buffer_size = 20M </span><br><span class="line">read_buffer = 2M </span><br><span class="line">write_buffer = 2M</span><br><span class="line">    </span><br><span class="line">[mysqlhotcopy] </span><br><span class="line">interactive-timeout</span><br></pre></td></tr></table></figure>
+<ol>
+<li>未完待补</li>
+</ol>
+<h1 id="安装软件等"><a href="#安装软件等" class="headerlink" title="安装软件等"></a>安装软件等</h1><ol>
+<li>typora markdown编辑器</li>
+<li>chrome</li>
+<li>Navicat 千万别装Navicat12 ，害得我又重装了两回系统</li>
+<li>Aria2</li>
+<li>sougou</li>
+<li>IIna 播放器</li>
+<li>insomniax 防止自动睡眠</li>
+<li>scroll reverser 鼠标滚动翻转</li>
+<li>ps cc 2017</li>
+<li>qq</li>
+<li>decompressor 解压软件</li>
+<li>hbuilder</li>
+<li>webstorm</li>
+<li>idea</li>
+<li>​</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mac/" rel="tag"># mac</a>
+          
+            <a href="/tags/教程/" rel="tag"># 教程</a>
+          
+            <a href="/tags/环境/" rel="tag"># 环境</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/01/Mac下hexo博客框架的详细搭建/" rel="next" title="Mac下hexo博客框架的详细搭建">
+                <i class="fa fa-chevron-left"></i> Mac下hexo博客框架的详细搭建
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/02/Mac下搭建maven-ssm项目/" rel="prev" title="Mac下搭建maven+ssm项目">
+                Mac下搭建maven+ssm项目 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Sotyoyo" />
+          <p class="site-author-name" itemprop="name">Sotyoyo</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#准备好一切的软件，工具等"><span class="nav-number">1.</span> <span class="nav-text">准备好一切的软件，工具等</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#开始重装系统！"><span class="nav-number">2.</span> <span class="nav-text">开始重装系统！</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装环境"><span class="nav-number">3.</span> <span class="nav-text">安装环境</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装软件等"><span class="nav-number">4.</span> <span class="nav-text">安装软件等</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sotyoyo</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
