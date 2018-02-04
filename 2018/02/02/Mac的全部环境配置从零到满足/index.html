@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Sotyoyo">
 <meta property="og:description" content="Mac的全部环境装到你欲仙欲死">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-04T09:15:55.322Z">
+<meta property="og:updated_time" content="2018-02-04T09:54:31.829Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac的全部环境配置从零到满足">
 <meta name="twitter:description" content="Mac的全部环境装到你欲仙欲死">
@@ -410,6 +410,10 @@
 <li><p>选择第二个重新安装os，然后傻瓜化操作</p>
 </li>
 <li><p><strong>允许任何源</strong> ： <code>sudo spctl --master-disable</code></p>
+</li>
+<li><p>显示隐藏文件 ： <code>defaults write com.apple.finder AppleShowAllFiles -boolean true ; killall Finder</code></p>
+</li>
+<li><p>不显示隐藏文件 ：<code>defaults write com.apple.finder AppleShowAllFiles -boolean false ; killall Finder</code></p>
 </li>
 <li><p>打开系统偏好设置</p>
 <blockquote>
