@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Sotyoyo">
 <meta property="og:description" content="Mac的全部环境装到你欲仙欲死">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-04T09:54:31.829Z">
+<meta property="og:updated_time" content="2018-03-01T07:09:31.236Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mac的全部环境配置从零到满足">
 <meta name="twitter:description" content="Mac的全部环境装到你欲仙欲死">
@@ -524,7 +524,10 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home</span><br><span class="line">export PATH=$&#123;PATH&#125;:$JAVA_HOME/bin</span><br><span class="line"></span><br><span class="line">export MYSQL_HOME=/usr/local/mysql</span><br><span class="line">export PATH=$&#123;PATH&#125;:$MYSQL_HOME/bin</span><br><span class="line"></span><br><span class="line">export MAVEN_HOME=/Users/sotyoyo/envir/maven/apache-maven-3.5.2</span><br><span class="line">export PATH=$&#123;PATH&#125;:$MAVEN_HOME/bin</span><br></pre></td></tr></table></figure>
 <p><code>source ~/.bash_profile</code>完成</p>
 </li>
-<li><p>​未完待补</p>
+<li><p>安装sass</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//首先更换自带的ruby的镜像源</span></span><br><span class="line"><span class="comment">//1.删除原gem源</span></span><br><span class="line">gem sources --remove https:<span class="comment">//rubygems.org/</span></span><br><span class="line"><span class="comment">//2.添加国内淘宝源</span></span><br><span class="line">gem sources -a https:<span class="comment">//ruby.taobao.org/</span></span><br><span class="line"><span class="comment">//3.打印是否替换成功</span></span><br><span class="line">gem sources -l</span><br><span class="line"></span><br><span class="line"><span class="comment">//安装sass和compass</span></span><br><span class="line">sudo gem install sass</span><br><span class="line">sudo gem install compass</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>​</p>
 </li>
 </ol>
 <h1 id="安装软件等"><a href="#安装软件等" class="headerlink" title="安装软件等"></a>安装软件等</h1><ol>
@@ -578,8 +581,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/01/Mac下hexo博客框架的详细搭建/" rel="next" title="Mac下hexo博客框架的详细搭建">
-                <i class="fa fa-chevron-left"></i> Mac下hexo博客框架的详细搭建
+              <a href="/2018/02/01/Windows下nvm,node,npm安装和使用/" rel="next" title="Windows下nvm,node,npm安装和使用">
+                <i class="fa fa-chevron-left"></i> Windows下nvm,node,npm安装和使用
               </a>
             
           </div>
@@ -667,7 +670,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -678,7 +681,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -689,7 +692,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
