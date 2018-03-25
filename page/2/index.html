@@ -270,6 +270,375 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/笔记-前端-jquery学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/02/笔记-前端-jquery学习/" itemprop="url">笔记 前端 jquery学习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T19:51:38+08:00">
+                2018-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery :"></a>jQuery :</h2><p> 1.12.4: <a href="https://cdn.bootcss.com/jquery/1.12.4/jquery.js" target="_blank" rel="noopener">https://cdn.bootcss.com/jquery/1.12.4/jquery.js</a></p>
+<p> 2.2.3: <a href="https://cdn.bootcss.com/jquery/2.2.3/jquery.js" target="_blank" rel="noopener">https://cdn.bootcss.com/jquery/2.2.3/jquery.js</a></p>
+<p> 3.2.1: <a href="https://cdn.bootcss.com/jquery/3.2.1/jquery.js" target="_blank" rel="noopener">https://cdn.bootcss.com/jquery/3.2.1/jquery.js</a></p>
+<h2 id="JQ向DOM对象转换："><a href="#JQ向DOM对象转换：" class="headerlink" title="JQ向DOM对象转换："></a>JQ向DOM对象转换：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#id&quot;).get(0).innerHTML = &quot;内容&quot;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#id&quot;)[0].innerHTML = &quot;内容&quot;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/jquery对象实际上是一个DOM对象数组</span><br></pre></td></tr></table></figure>
+<h2 id="DOM对象向JQ转换："><a href="#DOM对象向JQ转换：" class="headerlink" title="DOM对象向JQ转换："></a>DOM对象向JQ转换：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var DomObject = document.getElementById(&quot;id&quot;);</span><br><span class="line">$(DomObject).html(&quot;内容&quot;);</span><br></pre></td></tr></table></figure>
+<h2 id="JQ的常用知识宝典："><a href="#JQ的常用知识宝典：" class="headerlink" title="JQ的常用知识宝典："></a>JQ的常用知识宝典：</h2><blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_events.asp" target="_blank" rel="noopener">jQuery 触发事件整合</a></p>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp" target="_blank" rel="noopener">jQuery 选择器整合</a></p>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_effects.asp" target="_blank" rel="noopener">jQuery 效果整合</a></p>
+<blockquote>
+<p>.animate(<em>styles,speed,easing,callback</em>) .hide() .show() .toggle()</p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp" target="_blank" rel="noopener">jQuery 节点操作整合</a></p>
+<blockquote>
+<p>.insertBefore() .insertAfter() .clone() .append() .appendTo()</p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_attributes.asp" target="_blank" rel="noopener">jQuery 属性操作整合</a></p>
+<blockquote>
+<p>.addClass() .attr() .removeClass() .removeAttr() .val()</p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_css.asp" target="_blank" rel="noopener">jQuery CSS操作整合</a></p>
+<blockquote>
+<p>.css() .height() .width() .offset() .offsetParent() .position()</p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_traversing.asp" target="_blank" rel="noopener">jQuery 遍历操作整合</a></p>
+<blockquote>
+<p>.each() .add() .children() .closest() .find() .is() .first() .next() .nextAll() .prev() .prevAll .not() .sibilings() .slice() .contents() .eq()</p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_ajax.asp" target="_blank" rel="noopener">jQuery AJAX操作整合</a></p>
+</blockquote>
+<h2 id="JQ小操作："><a href="#JQ小操作：" class="headerlink" title="JQ小操作："></a>JQ小操作：</h2><ol>
+<li><p>全选/全不选</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#ConInput&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;#form &gt; input&quot;).attr(&quot;checked&quot;,this.checked);</span><br><span class="line">  /在1.8.3以下有效</span><br><span class="line">  $(&quot;#form &gt; input&quot;).prop(&quot;checked&quot;,this.checked);</span><br><span class="line">  /只在1.6版本以后有效</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>省市联动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var $cities = &#123;</span><br><span class="line">	&quot;sh&quot;:[&quot;普陀区&quot;,&quot;静安区&quot;,&quot;浦东新区&quot;,&quot;黄埔区&quot;],</span><br><span class="line">	&quot;js&quot;:[&quot;无锡&quot;,&quot;苏州&quot;,&quot;南京&quot;,&quot;扬州&quot;,&quot;高邮&quot;,&quot;镇江&quot;],</span><br><span class="line">	&quot;bj&quot;:[&quot;海淀区&quot;,&quot;清华&quot;,&quot;北大&quot;],</span><br><span class="line">	&quot;zj&quot;:[&quot;义乌&quot;,&quot;慈溪&quot;,&quot;杭州&quot;]</span><br><span class="line">&#125;</span><br><span class="line">$(&quot;#province&quot;).change(function()&#123;</span><br><span class="line">	$.each($cities,function(name,pro)&#123;</span><br><span class="line">		if(name == $(&quot;#province&quot;).val())&#123;</span><br><span class="line">				$(&quot;#city&quot;).empty();</span><br><span class="line">				$.each(pro,function(j,cit)&#123;</span><br><span class="line">				$(&quot;&lt;option&gt;&lt;/option&gt;&quot;).html(cit).appendTo($(&quot;#city&quot;));</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>菜单显示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">  $(&quot;#menu&quot;).mouseover(function()&#123;</span><br><span class="line">    $(&quot;#menu li:first&quot;).nextAll().show();</span><br><span class="line">  &#125;);</span><br><span class="line">  $(&quot;#menu&quot;).mouseout(function()&#123;</span><br><span class="line">    $(&quot;#menu li:first&quot;).nextAll().hide();</span><br><span class="line">  &#125;);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+<h2 id="JQ插件和-JQ-UI-："><a href="#JQ插件和-JQ-UI-：" class="headerlink" title="JQ插件和 JQ-UI ："></a>JQ插件和 JQ-UI ：</h2><ol>
+<li><p>jQuery-validation</p>
+<p>下载地址：<a href="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js" target="_blank" rel="noopener">https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js</a></p>
+<p>教程地址：<a href="http://www.runoob.com/jquery/jquery-plugin-validate.html" target="_blank" rel="noopener">http://www.runoob.com/jquery/jquery-plugin-validate.html</a></p>
+</li>
+<li><p>jQuery-UI</p>
+<p>下载地址：<a href="http://jqueryui.com/download/#!" target="_blank" rel="noopener">http://jqueryui.com/download/#!</a></p>
+<p>教程地址：<a href="http://www.runoob.com/jqueryui/jqueryui-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/jqueryui/jqueryui-tutorial.html</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/笔记-j2ee-servlet之间的跳转与传值/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/02/笔记-j2ee-servlet之间的跳转与传值/" itemprop="url">笔记 j2ee servlet之间的跳转与传值</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T19:48:51+08:00">
+                2018-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/j2ee/" itemprop="url" rel="index">
+                    <span itemprop="name">j2ee</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="servlet之间的跳转与传值"><a href="#servlet之间的跳转与传值" class="headerlink" title="servlet之间的跳转与传值"></a>servlet之间的跳转与传值</h1><h2 id="1-redirect方式"><a href="#1-redirect方式" class="headerlink" title="1. redirect方式"></a>1. redirect方式</h2><p>response.sendRedirect(“/a.jsp”);页面的路径是相对路径。sendRedirect可以将页面跳转到任何页面，不一定局限于本web应用中，如：response.sendRedirect(“<a href="http://www.google.com.hk/" target="_blank" rel="noopener">http://www.google.com.hk</a>“);</p>
+<ul>
+<li>跳转后浏览器地址栏变化。</li>
+<li>这种方式要传值出去的话，只能在url中带parameter或者放在session中，无法使用request.setAttribute来传递。</li>
+</ul>
+<h2 id="2-forward方式"><a href="#2-forward方式" class="headerlink" title="2. forward方式"></a>2. <strong>forward方式</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">RequestDispatcher dispatcher = request.getRequestDispatcher(&quot;/a.jsp&quot;);  </span><br><span class="line">dispatcher .forward(request, response);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>页面的路径是相对路径。forward方式只能跳转到本web应用中的页面上。</li>
+<li>跳转后浏览器地址栏不会变化。</li>
+<li>使用这种方式跳转，传值可以使用三种方法：url中带parameter，session，request.setAttribute。</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/Mac下搭建maven-ssm项目/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1093,7 +1462,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

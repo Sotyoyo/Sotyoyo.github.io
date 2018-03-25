@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Sotyoyo">
 <meta property="og:description" content="语言核心字符集 用 unicode字符集编写，unicode是ASCII和Latin-1的超集  区分大小写，html的标签和属性在js中必须是小写  注释  1行尾 //行尾注释  123/**	段落注释*/    可选分号（如果语句单独成行，可省略分号，只有在缺少分号无法正常解析的时候，javascript会自动填补分号），在遇到 ()[]单独成行的时候，要注意是否和上一行组成了一个函数，所以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-08T08:07:06.647Z">
+<meta property="og:updated_time" content="2018-03-21T02:49:46.103Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记 前端 JavaScript 犀牛书">
 <meta name="twitter:description" content="语言核心字符集 用 unicode字符集编写，unicode是ASCII和Latin-1的超集  区分大小写，html的标签和属性在js中必须是小写  注释  1行尾 //行尾注释  123/**	段落注释*/    可选分号（如果语句单独成行，可省略分号，只有在缺少分号无法正常解析的时候，javascript会自动填补分号），在遇到 ()[]单独成行的时候，要注意是否和上一行组成了一个函数，所以">
@@ -372,6 +372,12 @@
 </li>
 <li><p>在客户端JS中，window即全局对象。</p>
 </li>
+<li><p>函数作用域和声明提前</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">javascript 中的作用域不是块级作用域(用花括号包围)，而是函数作用域(函数块包围)，js里面的变量声明，有声明提前，即把声明语句置顶，赋值顺序不变，保留原位：</span><br><span class="line">	<span class="built_in">console</span>.log(a);</span><br><span class="line">	<span class="keyword">var</span> a = <span class="string">"scope"</span>;</span><br><span class="line">	</span><br><span class="line">	相当于：</span><br><span class="line">	<span class="keyword">var</span> a;</span><br><span class="line">	<span class="built_in">console</span>.log(a);</span><br><span class="line">	a = <span class="string">"scope"</span>;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>​</p>
+</li>
 </ol>
 
       
@@ -406,6 +412,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/12/笔记-前端-JavaScript-项目积累/" rel="prev" title="笔记 前端 JavaScript 项目积累">
+                笔记 前端 JavaScript 项目积累 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -482,7 +492,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
