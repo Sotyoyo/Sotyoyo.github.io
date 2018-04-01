@@ -270,6 +270,748 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/笔记-前端-JavaScript-ES6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/01/笔记-前端-JavaScript-ES6/" itemprop="url">笔记 前端 JavaScript ES6</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-01T12:59:42+08:00">
+                2018-04-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="变量定义"><a href="#变量定义" class="headerlink" title="变量定义"></a>变量定义</h1><ol>
+<li>var声明提前，可以重复定义。</li>
+<li>let不进行预解释，不可重复定义。</li>
+</ol>
+<h1 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h1><ol>
+<li>默认赋值只有在 ===undefined 的情况下才会赋值</li>
+<li>​</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/笔记-前端-BFC详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/27/笔记-前端-BFC详解/" itemprop="url">笔记 前端 BFC详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-27T17:13:33+08:00">
+                2018-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="1-规范解释"><a href="#1-规范解释" class="headerlink" title="1.规范解释"></a>1.规范解释</h3><blockquote>
+<p>块格式化上下文（Block Formatting Context，BFC）是Web页面的可视化CSS渲染的一部分，是布局过程中生成块级盒子的区域，也是浮动元素与其他元素的交互限定区域。</p>
+</blockquote>
+<h3 id="2-通俗理解"><a href="#2-通俗理解" class="headerlink" title="2.通俗理解"></a>2.通俗理解</h3><ul>
+<li>BFC 是一个独立的布局环境,可以理解为一个容器,在这个容器中按照一定规则进行物品摆放,并且<strong>不会影响其它环境中的物品</strong>。</li>
+<li><strong>如果一个元素符合触发 BFC 的条件，则 BFC 中的元素布局不受外部影响。</strong></li>
+<li>浮动元素会创建 BFC，则浮动元素内部子元素主要受该浮动元素影响，所以<strong>两个浮动元素之间是互不影响的</strong>。</li>
+</ul>
+<h2 id="二、创建-BFC"><a href="#二、创建-BFC" class="headerlink" title="二、创建 BFC"></a>二、创建 BFC</h2><ol>
+<li>根元素或包含根元素的元素</li>
+<li>浮动元素 float ＝ left | right 或 inherit<strong>（≠ none）</strong></li>
+<li>绝对定位元素 position ＝ absolute 或 fixed</li>
+<li>display ＝ inline-block | flex | inline-flex | table-cell 或 table-caption</li>
+<li>overflow ＝ hidden | auto 或 scroll<strong> (≠ visible)</strong></li>
+</ol>
+<h2 id="三、BFC-的特性"><a href="#三、BFC-的特性" class="headerlink" title="三、BFC 的特性"></a>三、BFC 的特性</h2><ol>
+<li>BFC 是一个独立的容器，容器内子元素不会影响容器外的元素。反之亦如此。</li>
+<li>盒子从顶端开始垂直地一个接一个地排列，盒子之间垂直的间距是由 margin 决定的。</li>
+<li>在同一个 BFC 中，两个相邻的块级盒子的<strong>垂直外边距</strong>会发生重叠。</li>
+<li><strong>BFC 区域不会和 float box 发生重叠。</strong></li>
+<li><strong>BFC 能够识别并包含浮动元素，当计算其区域的高度时，浮动元素也可以参与计算了。</strong></li>
+</ol>
+<h2 id="四、BFC-的作用"><a href="#四、BFC-的作用" class="headerlink" title="四、BFC 的作用"></a>四、BFC 的作用</h2><h3 id="1-包含浮动元素（清除浮动）"><a href="#1-包含浮动元素（清除浮动）" class="headerlink" title="1.包含浮动元素（清除浮动）"></a>1.包含浮动元素（清除浮动）</h3><ul>
+<li>浮动元素会脱离文档流(绝对定位元素也会脱离文档流)，导致无法计算准确的高度，这种问题称为<strong>高度塌陷</strong>。</li>
+<li>解决高度塌陷问题的前提是能够识别并包含浮动元素，也就是<strong>清除浮动</strong>。</li>
+</ul>
+<p><img src="https://segmentfault.com/img/bVm2qT" alt="img"></p>
+<p>问题举例：如上左图所示，容器（container）没有高度或者 height = auto ,并且其子元素（sibling）是浮动元素，所以该容器的高度是不会被撑开的，即高度塌陷。</p>
+<p>解决方法：<strong>在容器（container）中创建 BFC。</strong></p>
+<p>HTML</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;container&quot;&gt;</span><br><span class="line">        &lt;div class=&quot;Sibling&quot;&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=&quot;Sibling&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>CSS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.container &#123; </span><br><span class="line">        overflow: hidden; /* creates block formatting context */ </span><br><span class="line">        background-color: green; </span><br><span class="line">&#125; </span><br><span class="line">.container .Sibling &#123; </span><br><span class="line">        float: left; </span><br><span class="line">        margin: 10px;</span><br><span class="line">        background-color: lightgreen;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>特别提示：</p>
+<ul>
+<li>通过 overflow:hidden 创建 BFC，固然可以解决高度塌陷的问题，但是大范围应用在布局上肯定<strong>不是最合适的</strong>，毕竟 overflow:hidden 会造成溢出隐藏的问题，尤其是与 JS 的交互效果会有影响。</li>
+<li>我们可以使用 <strong>clearfix</strong> 实现清除浮动，这里就不多介绍了，想要了解的可以阅读<a href="https://segmentfault.com/a/1190000013664630" target="_blank" rel="noopener">前端面试题-clearfix（清除浮动）</a>。</li>
+</ul>
+<h3 id="2-导致外边距折叠"><a href="#2-导致外边距折叠" class="headerlink" title="2.导致外边距折叠"></a>2.导致外边距折叠</h3><p><strong>相邻</strong>的两个盒子（可能是兄弟关系也可能是祖先关系）的垂直边距相遇时， 它们将形成一个外边距。这个外边距的高度等于两个发生折叠的外边距的高度中的<strong>较大者</strong>。</p>
+<p><img src="https://segmentfault.com/img/bV5GnA?w=700&amp;h=250" alt="img"></p>
+<p>HTML</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;Container&quot;&gt; </span><br><span class="line">    &lt;p&gt;Sibling 1&lt;/p&gt; </span><br><span class="line">    &lt;p&gt;Sibling 2&lt;/p&gt; </span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>CSS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.Container &#123; </span><br><span class="line">    background-color: red; </span><br><span class="line">    overflow: hidden; /* creates a block formatting context */ </span><br><span class="line">&#125; </span><br><span class="line">p &#123; </span><br><span class="line">    background-color: lightgreen; </span><br><span class="line">    margin: 10px 0; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>如上图所示：红色盒子（Container）中包含两个绿色的兄弟元素（P），并且红色盒子设置 overflow: hidden; 则一个BFC 已经被创建,即导致外边距折叠。</p>
+<p>理论上两个兄弟元素之间的边距应该是两个元素的边距之和（20px），但实际是 10px。这就是外边距折叠导致的。</p>
+<p>2.1 折叠外边距的值</p>
+<ul>
+<li>两个相邻的外边距都是 <strong>正数</strong> 时，折叠外边距是两者中较大的值。</li>
+<li>两个相邻的外边距都是 <strong>负数</strong> 时，折叠外边距是两者中绝对值较大的值。</li>
+<li>两个相邻的外边距是 <strong>一正一负</strong> 时，折叠外边距是两者相加的和。</li>
+</ul>
+<p>2.2 <strong>外边距折叠的条件是 margin 必须相邻!</strong></p>
+<h3 id="3-避免外边距折叠"><a href="#3-避免外边距折叠" class="headerlink" title="3.避免外边距折叠"></a>3.避免外边距折叠</h3><p>这一听起来可能有些困惑，因为我们在前面讨论了 BFC 导致外边距折叠的问题。但我们必须记住的是<strong>外边距折叠（Margin collapsing）只会发生在属于同一BFC的块级元素之间</strong>。如果它们属于不同的 BFC，它们之间的外边距则不会折叠。所以通过<strong>创建一个不同的 BFC</strong> ，就可以避免外边距折叠。</p>
+<p>修改前面的例子并添加第三个兄弟元素，CSS不变。</p>
+<p>HTML</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;Container&quot;&gt; </span><br><span class="line">        &lt;p&gt;Sibling 1&lt;/p&gt; </span><br><span class="line">        &lt;p&gt;Sibling 2&lt;/p&gt; </span><br><span class="line">        &lt;p&gt;Sibling 3&lt;/p&gt; </span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>结果不会改变，还会折叠外边距，三个兄弟元素（P）将会以垂直距离为 10px 的距离分开。原因是三个兄弟元素都属于同一个 BFC。</p>
+<p>创建一个不同的 BFC ，就可以避免外边距折叠。</p>
+<p>HTML</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;Container&quot;&gt; </span><br><span class="line">        &lt;p&gt;Sibling 1&lt;/p&gt; </span><br><span class="line">        &lt;p&gt;Sibling 2&lt;/p&gt; </span><br><span class="line">        &lt;div class=&quot;newBFC&quot;&gt; </span><br><span class="line">            &lt;p&gt;Sibling 3&lt;/p&gt; </span><br><span class="line">        &lt;/div&gt; </span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>CSS</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.Container &#123; </span><br><span class="line">            background-color: red; </span><br><span class="line">            overflow: hidden; /* creates a block formatting context */ </span><br><span class="line">&#125; </span><br><span class="line">p &#123; </span><br><span class="line">            background-color: lightgreen; </span><br><span class="line">            margin: 10px 0; </span><br><span class="line">&#125;</span><br><span class="line">.newBFC &#123; </span><br><span class="line">            overflow: hidden; /* creates new block formatting context */ </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://segmentfault.com/img/bV5GGS?w=568&amp;h=583" alt="img"></p>
+<p>当第二和第三个兄弟元素属于不同的 BFC 时，它们之间就没有外边距折叠。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/笔记-前端-css-代码规范/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/27/笔记-前端-css-代码规范/" itemprop="url">笔记 前端 css 代码规范</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-27T16:52:36+08:00">
+                2018-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="重要点"><a href="#重要点" class="headerlink" title="重要点"></a>重要点</h1><ol>
+<li><p>用<strong>两个空格来代替制表符（tab）</strong></p>
+</li>
+<li><p><strong>单独的选择器单独放在一行</strong></p>
+</li>
+<li><p>每个声明块的<strong>左花括号前添加一个空格</strong></p>
+</li>
+<li><p>每条<strong>声明语句之后应该插入一个空格</strong></p>
+</li>
+<li><p>每条<strong>声明都应该独占一行</strong></p>
+</li>
+<li><p>不要在 rgb()、rgba()、hsl()、hsla() 或 rect() 值的内部的<strong>逗号后面插入空格</strong></p>
+</li>
+<li><p><strong>省略小于 1 的小数前面的 0</strong> （例如，<strong>.5</strong> 代替 0.5；<strong>-.5px</strong> 代替 -0.5px）</p>
+</li>
+<li><p><strong>十六进制值应该全部小写</strong></p>
+</li>
+<li><p>尽量使用<strong>简写形式的十六进制值</strong></p>
+</li>
+<li><p>为<strong>选择器中的属性添加双引号</strong>，例如，input[type=<strong>“text”</strong>]</p>
+</li>
+<li><p><strong>避免为 0 值指定单位</strong>，例如，用 <strong>margin: 0</strong></p>
+</li>
+<li><p>相关的属性声明应当归为一组，并按照下面的<strong>顺序</strong>排列：</p>
+<p>（1）Positioning</p>
+<p>（2）Box model</p>
+<p>（3）Typographic</p>
+<p>（4）Visual</p>
+<p>（5）Misc</p>
+</li>
+<li><p>将媒体查询放在尽可能相关规则的附近。<strong>不要将他们打包放在一个单一样式文件中或者放在文档底部</strong></p>
+</li>
+<li><p><strong>每个属性的值在垂直方向对齐</strong></p>
+</li>
+<li><p><strong>限制使用简写形式的属性声明</strong></p>
+</li>
+<li><p>圆括号中的数学计算表达式的数值、变量和操作符之间均添加一个<strong>空格</strong></p>
+</li>
+<li><p>class 名称中只能出现<strong>小写字符和破折号</strong></p>
+</li>
+<li><p>使用 .js-<em> class 来标识<strong>行为</strong>,<em>*不要</em></em>将这些 class 包含到 CSS 文件中</p>
+</li>
+<li><p><strong>选择器要尽可能短</strong>，并且尽量限制组成选择器的元素个数，建议不要超过 3</p>
+</li>
+<li><p>在文件结尾添加一个<strong>空白行</strong></p>
+</li>
+<li><p>保存文件时，删除尾部的<strong>空白符</strong></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/27/笔记-前端-css-等比例盒子/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/27/笔记-前端-css-等比例盒子/" itemprop="url">笔记 前端 css 等比例盒子</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-27T16:43:03+08:00">
+                2018-03-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="实现方式"><a href="#实现方式" class="headerlink" title="实现方式"></a>实现方式</h1><p>HTML</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"box"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"..."</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>CSS</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">padding-bottom</span>: <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">img</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="演示效果"><a href="#演示效果" class="headerlink" title="演示效果"></a>演示效果</h2><p><img src="https://segmentfault.com/img/bV6XkH?w=432&amp;h=216" alt="img"></p>
+<h1 id="方式2"><a href="#方式2" class="headerlink" title="方式2"></a>方式2</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">height</span>:<span class="number">0</span>;</span><br><span class="line">  <span class="attribute">position</span>: relative;</span><br><span class="line">  <span class="attribute">background-color</span>: red;</span><br><span class="line">  overflow: hidden;  //需要触发BFC消除margin折叠的问题</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.box</span><span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">content</span>: <span class="string">''</span>;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  margin-top: 100%; //margin 百分比相对父元素宽度计算</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/26/笔记-前端-less/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/26/笔记-前端-less/" itemprop="url">笔记 前端 less</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-26T20:54:27+08:00">
+                2018-03-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install less</span><br></pre></td></tr></table></figure>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><ol>
+<li><p>用less构建</p>
+<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lessc style.less &gt; styles.css</span><br><span class="line">lessc -x style.less &gt; styles.min.css</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用node构建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node main.js</span><br></pre></td></tr></table></figure>
+<p>main.js:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> less = <span class="built_in">require</span>(<span class="string">'less'</span>);</span><br><span class="line"></span><br><span class="line">less.render(<span class="string">'.class &#123; width: (1 + 1) &#125;'</span>, <span class="function"><span class="keyword">function</span> (<span class="params">e, output</span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(output.css);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>用浏览器构建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">在html内引入less样式文件</span><br><span class="line">&lt;link rel=&quot;stylesheet/less&quot; type=&quot;text/css&quot; href=&quot;styles.less&quot;&gt;</span><br><span class="line">再引入less工具js文件</span><br><span class="line">&lt;script src=&quot;xxxx/less.min.js&quot;&gt;</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+<li><p>用gulp构建</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/25/笔记-j2se-数据类型转换/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -958,963 +1700,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/笔记-前端-sass/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/01/笔记-前端-sass/" itemprop="url">笔记 前端 sass</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-01T15:09:09+08:00">
-                2018-03-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/前端/sass/" itemprop="url" rel="index">
-                    <span itemprop="name">sass</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="变量规则"><a href="#变量规则" class="headerlink" title="变量规则"></a>变量规则</h2><ol>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$nav-color: #F90;</span><br><span class="line">nav &#123;</span><br><span class="line">  $width: 100px;</span><br><span class="line">  width: $width;</span><br><span class="line">  color: $nav-color;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//编译后</span><br><span class="line"></span><br><span class="line">nav &#123;</span><br><span class="line">  width: 100px;</span><br><span class="line">  color: #F90;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>​</p>
-</li>
-<li><p>​</p>
-</li>
-<li><p>​</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/25/笔记-前端-canvas/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/25/笔记-前端-canvas/" itemprop="url">笔记 前端 canvas</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-25T20:54:48+08:00">
-                2018-02-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/前端/" itemprop="url" rel="index">
-                    <span itemprop="name">前端</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p># </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/笔记-前端-vue2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/02/笔记-前端-vue2/" itemprop="url">笔记 前端 vue2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T20:06:41+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/Mac下vmware-fusion的NAT网络配置/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/02/Mac下vmware-fusion的NAT网络配置/" itemprop="url">Mac下vmware-fusion的NAT网络配置</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T19:59:00+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/系统/" itemprop="url" rel="index">
-                    <span itemprop="name">系统</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>引用地址</strong>：<a href="http://blog.csdn.net/zhishengqianjun/article/details/77046796" target="_blank" rel="noopener">http://blog.csdn.net/zhishengqianjun/article/details/77046796</a></p>
-<h2 id="Mac-VMware-Fusion"><a href="#Mac-VMware-Fusion" class="headerlink" title="Mac VMware Fusion"></a>Mac VMware Fusion</h2><p>​       我们在使用虚拟机的时候，经常遇到这样的问题，我们会换地方，ip会变化，如果虚拟机使用桥接的方式，那么很多与ip相关的服务都会出现问题，所以我们希望使用nat模式，不过遗憾的是，在Windows下，VMware配置nat十分之方便，但是在Mac下，却有点麻烦，因为默认情况下，不支持我们配置静态ip，这对于我们来说就不太方便了。</p>
-<h2 id="Fusion配置Nat静态IP"><a href="#Fusion配置Nat静态IP" class="headerlink" title="Fusion配置Nat静态IP"></a>Fusion配置Nat静态IP</h2><h3 id="创建Nat网络"><a href="#创建Nat网络" class="headerlink" title="创建Nat网络"></a>创建Nat网络</h3><p>​       首先我们进入VMware Fusion的配置界面（快捷键是Command+,），然后打开网络配置：</p>
-<p><img src="http://blog.csdn.net/zhishengqianjun/article/details/images/net2.png" alt="img"><br><img src="http://img.blog.csdn.net/20170810110820522?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       如上图，首先点击锁的按钮，进行解锁，需要输入密码才可以；</p>
-<p><img src="http://img.blog.csdn.net/20170810110835994?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       然后，我们点击<code>+</code>号，增加一个网络，在这里显示的是<code>vmnet2</code>，在其他机器可能是3，这一点不影响，然后，将上图所示的3代表的选项选中，将下面的DHCP的选项取消。</p>
-<p> （<strong>注意</strong>：要配置静态ip，一定要取消DHCP选项！）</p>
-<h3 id="修改Nat网络配置"><a href="#修改Nat网络配置" class="headerlink" title="修改Nat网络配置"></a>修改Nat网络配置</h3><p>​       然后，我们需要打开终端；</p>
-<p>​       进入下面的目录：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /Library/Preferences/VMware\ Fusion/1</span><br></pre></td></tr></table></figure>
-<p>​       ( <strong>注意</strong>：在路径中出现空格需要用<code>\</code>转义)</p>
-<p><img src="http://img.blog.csdn.net/20170810110954965?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       然后我们就能看到上面的配置文件，首先打开<code>networking</code>:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim networking1</span><br></pre></td></tr></table></figure>
-<p>​       （<strong>注意</strong>：没有<code>vim</code>的用<code>vi</code>，一定记得加<code>sudo</code>，需要<code>root</code>权限才能修改）</p>
-<p><img src="http://img.blog.csdn.net/20170810111123307?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       如上图，<code>VNET_2</code>开头的配置就是我们创建的那块网卡，标号为1的是子网掩码，标号为2的是子网地址，注意，是子网地址！</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">补充：</span><br><span class="line">    通过子网掩码划分子网，比如说3个255：</span><br><span class="line">        11111111.11111111.11111111.00000000</span><br><span class="line">    然后我们有一个ip，与上面的子网掩码进行与操作，如果是一样的，那么就代表是在一个网段中；</span><br><span class="line">    例如，192.168.2.1，192.168.2.2就是一个网段；</span><br><span class="line">    但是，192.168.2.1，192.168.3.2就不是一个网段，进行与操作以后，有个3是不一样的。</span><br><span class="line">    子网地址是子网的第一个地址，也就是说，如果是255.255.255.0，那么指望地址就是*.*.*.0，前面的*可以自己配置。1234567</span><br></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170810122643484?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       然后我们进入<code>vmnet2</code>，看到上图所示的配置文件；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim nat.conf1</span><br></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170810122705442?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       如上图所示，修改这里的配置即可，第一个是ip，这里的ip的网关，下面的是子网，与前面的子网掩码保持一致，上面的ip除了子网的第一个和最后一个ip不能用，其他都可以用，这里我们配置为<code>192.168.2.2</code>。</p>
-<p> 还有一个重要的步骤，重新打开VMware的网络配置，如下图：</p>
-<p><img src="http://img.blog.csdn.net/20170810122851620?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       为了让VMware更新我们手动修改的配置，首先我们选中这个网络，然后将2所示的选项取消选中，这是后3会被点亮，点击应用，然后在将2选中，再点击应用，这样网络配置就更新了。</p>
-<p> （实际上不更改配置，就是为了点击应用，让VMware更新一下配置）</p>
-<h3 id="虚拟机网络配置"><a href="#虚拟机网络配置" class="headerlink" title="虚拟机网络配置"></a>虚拟机网络配置</h3><p>​       接下来，我们来配置一下虚拟机，目前我装的是<code>CentOS 7.3 1611</code>，首先打开虚拟机的配置选项(快捷键是Command</p>
-<p>+E)：</p>
-<p><img src="http://img.blog.csdn.net/20170810122921632?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       打开网络，显示下图所示的选项：</p>
-<p><img src="http://img.blog.csdn.net/20170810123156577?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       然后选中我们配置的网络：<code>vmnet2</code>。</p>
-<h3 id="虚拟机网络配置-1"><a href="#虚拟机网络配置-1" class="headerlink" title="虚拟机网络配置"></a>虚拟机网络配置</h3><p> 然后我们打开虚拟机，进入下面的目录，找到网卡的配置文件：</p>
-<p><img src="http://img.blog.csdn.net/20170810124007817?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       打开网卡的配置文件：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ifcfg-ens331</span><br></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170810125620393?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       如上图，其中子网掩码要与之前保持一致，然后ip只要在同一网段就可以，网关和DNS配置到我们之前配置的网关上去。</p>
-<p>​       重启网络生效：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart network1</span><br></pre></td></tr></table></figure>
-<p>​       查看ip:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip a1</span><br></pre></td></tr></table></figure>
-<p><img src="http://img.blog.csdn.net/20170810125650257?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>​       至此就大功告成了！</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/笔记-分布式-预科一/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/02/笔记-分布式-预科一/" itemprop="url">笔记 分布式 预科一</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T19:53:41+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/笔记/分布式/" itemprop="url" rel="index">
-                    <span itemprop="name">分布式</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><p>应用程序-系统调用-内核-硬件</p>
-<p>服务器性能指标:：运算速度 内存</p>
-<p>debian：极其稳定 适用于系统管理员和高级用户，不适合新手。</p>
-<p>Ubuntu：debian的衍生版，阉割版</p>
-<p>red hat：收费，第一款面向商业。</p>
-<p>centOs：基于 red hat ，与母版如出一辙。</p>
-<h1 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h1><h2 id="编辑-虚拟网络编辑器"><a href="#编辑-虚拟网络编辑器" class="headerlink" title="编辑-虚拟网络编辑器"></a>编辑-虚拟网络编辑器</h2><ul>
-<li><p>桥接模式：利用本机的有线网卡作为交换机进行外网链接，本机ip地址发生改变，桥接会断开。</p>
-</li>
-<li><p>仅主机：和本机共享网卡。</p>
-</li>
-<li><p>NAT模式：创建两个虚拟网卡，由虚拟网卡桥接本地网卡，不受本机ip地址的影响。</p>
-<p><a href="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0k8040j20f10dcjvi.jpg" target="_blank" rel="noopener"><img src="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0k8040j20f10dcjvi.jpg" alt="img"></a></p>
-<p><a href="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0kte67j20cr0dcn03.jpg" target="_blank" rel="noopener"><img src="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0kte67j20cr0dcn03.jpg" alt="img"></a></p>
-<p><a href="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0llg8dj20cu0dcdie.jpg" target="_blank" rel="noopener"><img src="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0llg8dj20cu0dcdie.jpg" alt="img"></a></p>
-</li>
-</ul>
-<h2 id="安装centOs"><a href="#安装centOs" class="headerlink" title="安装centOs"></a>安装centOs</h2><ul>
-<li><p>新建DVD，选择NAT</p>
-</li>
-<li><p>选择第一个install 回车</p>
-</li>
-<li><p>skip</p>
-</li>
-<li><p>傻瓜化设置</p>
-</li>
-<li><p>主机名不要带下划线和特殊符号</p>
-</li>
-<li><p>系统使用UTC 不勾选</p>
-</li>
-<li><p>创建自定义布局</p>
-<p><a href="http://wx4.sinaimg.cn/mw690/896d20a7gy1fmqh0jq1nkj20hs0cst99.jpg" target="_blank" rel="noopener"><img src="http://wx4.sinaimg.cn/mw690/896d20a7gy1fmqh0jq1nkj20hs0cst99.jpg" alt="img"></a></p>
-<ul>
-<li><p>/</p>
-<p><a href="http://wx2.sinaimg.cn/mw690/896d20a7gy1fmqh0itw72j20hs0csq3t.jpg" target="_blank" rel="noopener"><img src="http://wx2.sinaimg.cn/mw690/896d20a7gy1fmqh0itw72j20hs0csq3t.jpg" alt="img"></a></p>
-</li>
-<li><p>/swap</p>
-<p><a href="http://wx1.sinaimg.cn/mw690/896d20a7gy1fmqh0j8ztzj20hs0cswfb.jpg" target="_blank" rel="noopener"><img src="http://wx1.sinaimg.cn/mw690/896d20a7gy1fmqh0j8ztzj20hs0cswfb.jpg" alt="img"></a></p>
-</li>
-</ul>
-</li>
-<li><p>配置网络环境</p>
-<ul>
-<li>编辑IPV4</li>
-</ul>
-</li>
-</ul>
-<h1 id="linux目录详解"><a href="#linux目录详解" class="headerlink" title="linux目录详解"></a>linux目录详解</h1><ul>
-<li><p><strong>/ - Root</strong></p>
-<p>通常称为根分区。所有的文件和目录皆由此开始。只有root用户对此目录拥有写权限。</p>
-</li>
-<li><p><strong>/bin - 用户可执行文件</strong></p>
-<p>此目录包含二进制可执行文件。在单用户模式下Linux使用此目录的命令。此目录包含所有用户的常用命令，如ls、ping、cp等。</p>
-</li>
-<li><p><strong>/sbin - 系统可执行文件</strong></p>
-<p>此目录中的命令主要供系统管理员使用，以进行系统维护。例如，iptables、reboot、fdisk等。</p>
-</li>
-<li><p><strong>/etc - 配置文件</strong></p>
-<p>包含所有应用程序的配置文件，也包含启动、关闭某个特定程序的脚本，例如，/etc/resolv.conf、/etc/logrotate.conf等。</p>
-</li>
-<li><p><strong>/dev - 设备文件</strong></p>
-<p>包含设备文件。在Linux中，一切都被看做文件。终端设备、USB、磁盘等等都被看做文件，如/dev/usbmon0。</p>
-</li>
-<li><p><strong>/proc - 进程信息</strong></p>
-<p>所有系统进程的信息都包含在/proc目录中。/proc目录并不是一个真正的文件系统，而是包含了运行中的进程信息。例如，/proc目录包含了进程信息。/proc目录也包含了系统资源信息，如/proc/uptime包含了最近一次启动至今的正常运行时间，/proc/cpuinfo包含了处理器信息等。</p>
-</li>
-<li><p><strong>/var - 变量文件</strong></p>
-<p>/var是一个可增长的目录，包含变量文件。例如，/var/log（系统日志）、/var/lib （包文件） 、/var/mail（邮件）、/var/spool （打印队列）。</p>
-</li>
-<li><p><strong>/usr - 用户程序</strong></p>
-<p>为用户应用程序存放可执行文件、源代码和文档。/usr/bin包含了用户可执行文件，如at、awk、cc等。/usr/sbin包含了系统管理员可执行文件，如cron、sshd、useradd等。/usr/local包含了用户编译源代码安装的应用程序，如/usr/local/apache2。</p>
-</li>
-<li><p><strong>/home - 用户主目录</strong></p>
-<p>存放用户的私人文件。</p>
-</li>
-<li><p><strong>/boot - 启动加载文件</strong></p>
-<p>Linux系统启动时需要加载的文件。Kernel initrd、grub等文件都存放在此。</p>
-</li>
-<li><p><strong>/lib - 系统库文件</strong></p>
-<p>/bin和/sbin中的可执行文件需要/lib中库文件的支持。库文件通常以“ld”或“ld*.so”的形式命名，如ld-2.11.1.so。</p>
-</li>
-<li><p><strong>/opt - 可选应用</strong></p>
-<p>/opt用于安装独立软件商的可选应用。</p>
-</li>
-<li><p><strong>/mnt - 挂载目录</strong></p>
-<p>挂载点，系统管理员可用于临时挂载文件系统。</p>
-</li>
-<li><p><strong>/media - 可移动媒体设备</strong></p>
-<p>挂载可移动媒体设备，如/media/cdrom、/media/floppy等。</p>
-</li>
-<li><p><strong>/srv - 服务数据</strong></p>
-<p>Srv表示服务，用于服务器的所有服务数据存储在此目录中。</p>
-</li>
-</ul>
-<h1 id="linux命令（格式：command-【option】【arguments】）"><a href="#linux命令（格式：command-【option】【arguments】）" class="headerlink" title="linux命令（格式：command 【option】【arguments】）"></a>linux命令（格式：command 【option】【arguments】）</h1><ul>
-<li><p>su 切换到管理员用户</p>
-</li>
-<li><p>shutdown -h now 立即关机<br>shutdown -h 23:00 //23:00关机<br>shutdown -h 20 //20分钟后关机<br>shutdown -t //秒<br>shutdown -r 10 //十分钟后重启<br>shutdown -c //撤销shutdown命令</p>
-</li>
-<li><p>groupadd hadoop 创建用户组</p>
-</li>
-<li><p>useradd -g hadoop hadoopUser 创建hadoop用户加入到hadoop用户组中</p>
-</li>
-<li><p>passwd hadoopUser 修改用户密码</p>
-</li>
-<li><p>ls -a , ls -all , ls -l</p>
-</li>
-<li><p>cp -r 被复制的 新目录</p>
-</li>
-<li><p>rm -rf 文件名 -f强制删除 -r递归删除</p>
-</li>
-<li><p>mv 被复制的 新目录 移动和重命名</p>
-</li>
-<li><p>cat（全部显示） more（部分显示） od（二进制查看）</p>
-</li>
-<li><blockquote>
-<blockquote>
-<p>追加 &gt; 覆盖</p>
-</blockquote>
-</blockquote>
-</li>
-<li><p>tar -c打包 -x解压缩 -z压缩 -f给出文档名</p>
-</li>
-<li><p>tar -zcf 文件名 新文件名</p>
-</li>
-</ul>
-<h1 id="Linux-文件权限状态"><a href="#Linux-文件权限状态" class="headerlink" title="Linux 文件权限状态"></a>Linux 文件权限状态</h1><ul>
-<li><p>总共十位</p>
-</li>
-<li><p>第一位 d/- d代表目录，-代表文件</p>
-</li>
-<li><p>后九位，每三个为一组 r代表read读取，w代表write写入，x代表执行，-代表没有</p>
-<blockquote>
-<p>第一组代表文件所有者的权限</p>
-<p>第二组代表文件所属用户组权限</p>
-<p>第三组代表其他人对该文件的权限</p>
-<blockquote>
-<p>改变文件用户组：chgrp 组名 文件 默认不影响子文件  chgrp -R 递归处理所有的子目录和文件<br>改变文件用户：  chown -R 所有者:组名<br>改变文件权限状态：</p>
-<pre><code>chmod 数字参数 文件名
-    r = 4 , w = 2 , x = 1 , - = 0  每一组，相加得数字参数，一共三个
-    例如：rwxrwxrwx = 777
-chmod 字母参数 文件名
-    user(u) group(g) other(o) all(a)
-chmod u+w 文件名  //给所有者添加写入权限
-chmod o-w 文件名  //给其让人删除写入权限
-</code></pre></blockquote>
-</blockquote>
-</li>
-</ul>
-<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><p><a href="http://wx4.sinaimg.cn/mw690/896d20a7gy1fmqqmifomoj20hs083myb.jpg" target="_blank" rel="noopener"><img src="http://wx4.sinaimg.cn/mw690/896d20a7gy1fmqqmifomoj20hs083myb.jpg" alt="img"></a></p>
-<p>ps aux | grep crond</p>
-<p>pstree</p>
-<p>kill -9 PID</p>
-<p>常用信号，参数</p>
-<p><a href="http://wx2.sinaimg.cn/mw690/896d20a7gy1fmqprtyv2gj20hs0bzjsj.jpg" target="_blank" rel="noopener"><img src="http://wx2.sinaimg.cn/mw690/896d20a7gy1fmqprtyv2gj20hs0bzjsj.jpg" alt="img"></a></p>
-<p>bg 后台继续运行暂停的进程</p>
-<p>fg 把后台进程发送到前台</p>
-<h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><h1 id="数据库管理系统DBMS"><a href="#数据库管理系统DBMS" class="headerlink" title="数据库管理系统DBMS"></a>数据库管理系统DBMS</h1><h2 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h2><h2 id="SQL接口"><a href="#SQL接口" class="headerlink" title="SQL接口"></a>SQL接口</h2><h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><h2 id="查询优化器"><a href="#查询优化器" class="headerlink" title="查询优化器"></a>查询优化器</h2><h2 id="缓存和缓冲池和具体引擎的缓存和缓冲池子"><a href="#缓存和缓冲池和具体引擎的缓存和缓冲池子" class="headerlink" title="缓存和缓冲池和具体引擎的缓存和缓冲池子"></a>缓存和缓冲池和具体引擎的缓存和缓冲池子</h2><h2 id="数据库引擎"><a href="#数据库引擎" class="headerlink" title="数据库引擎"></a>数据库引擎</h2>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1960,7 +1750,7 @@ chmod o-w 文件名  //给其让人删除写入权限
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-count">22</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
