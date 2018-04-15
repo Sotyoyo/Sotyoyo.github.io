@@ -270,6 +270,126 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/15/笔记-前端-JavaScript-原生ajax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/15/笔记-前端-JavaScript-原生ajax/" itemprop="url">笔记-前端-JavaScript-原生ajax</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-15T09:31:03+08:00">
+                2018-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> url = <span class="string">""</span>;</span><br><span class="line"><span class="comment">//创建ajax对象</span></span><br><span class="line"><span class="keyword">let</span> xmlHttp = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"><span class="comment">//开启数据通道('请求方式','带参url','是否异步')</span></span><br><span class="line">xmlHttp.open(<span class="string">'GET'</span>,url,<span class="literal">true</span>);</span><br><span class="line"><span class="comment">//提交请求(参数)</span></span><br><span class="line">xmlHttp.send(<span class="literal">null</span>);</span><br><span class="line"><span class="comment">//监听数据通道变化</span></span><br><span class="line">xmlHttp.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    xmlHttp.readyState(XMLHTTP通道状态码)</span></span><br><span class="line"><span class="comment">    	0－未初始化，即尚未调用 open。</span></span><br><span class="line"><span class="comment">		1－初始化，即尚未调用 send。</span></span><br><span class="line"><span class="comment">		2－发送数据，即已经调用 send。</span></span><br><span class="line"><span class="comment">		3－数据传送中。</span></span><br><span class="line"><span class="comment">		4－完成。</span></span><br><span class="line"><span class="comment">    xmlHttp.status(HTTP服务器状态码)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">if</span>(xmlHttp.readyState == <span class="number">4</span> &amp;&amp; xmlHttp.status == <span class="number">200</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.parse(xmlHttp.response));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/10/教程-小程序-关于腾讯地图api的使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1744,138 +1864,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/12/笔记-前端-JavaScript-项目积累/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/12/笔记-前端-JavaScript-项目积累/" itemprop="url">笔记 前端 JavaScript 项目积累</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T16:30:42+08:00">
-                2018-03-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h2><ol>
-<li><p><strong>window.location</strong></p>
-<p>| 属性     | 描述                              |<br>| ——– | ——————————— |<br>| hash     | 从井号 (#) 开始的 URL（锚）       |<br>| host     | 主机名和当前 URL 的端口号         |<br>| hostname | 当前 URL 的主机名                 |<br>| href     | 完整的 URL                        |<br>| pathname | 当前 URL 的路径部分               |<br>| port     | 当前 URL 的端口号                 |<br>| protocol | 当前 URL 的协议                   |<br>| search   | 从问号 (?) 开始的 URL（查询部分） |</p>
-</li>
-</ol>
-<p>应用：(<code>&quot;https://www.baidu.com?id=111&amp;name=222&quot;</code>)</p>
-<ul>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取到get请求的参数</span></span><br><span class="line"><span class="keyword">let</span> url = <span class="built_in">window</span>.location.search;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/[?&amp;][^?&amp;]+=[^?&amp;]+/g</span>;</span><br><span class="line"><span class="keyword">let</span> arr = url.match(reg);								<span class="comment">//['?id=111','&amp;name=222']</span></span><br><span class="line"><span class="keyword">if</span> (arr) &#123;</span><br><span class="line">    arr.forEach(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> tempArr = item.substring(<span class="number">1</span>).split(<span class="string">'='</span>);</span><br><span class="line">        <span class="comment">//将每个数组内容 拆分成一个新的数组，这个新的数组 [参数名,参数值]</span></span><br><span class="line">      <span class="keyword">let</span> key = <span class="built_in">decodeURIComponent</span>(tempArr[<span class="number">0</span>]);</span><br><span class="line">      <span class="keyword">let</span> val = <span class="built_in">decodeURIComponent</span>(tempArr[<span class="number">1</span>]);</span><br><span class="line">      obj[key] = val;</span><br><span class="line">        <span class="comment">//构造成一个对象</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>​</p>
-<p>​</p>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1926,7 +1914,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

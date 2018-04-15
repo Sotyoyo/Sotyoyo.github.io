@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Sotyoyo">
 <meta property="og:description" content="window对象 window.location | 属性     | 描述                              || ——– | ——————————— || hash     | 从井号 (#) 开始的 URL（锚）       || host     | 主机名和当前 URL 的端口号         || hostname | 当前 URL 的主机名">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-12T08:42:16.636Z">
+<meta property="og:updated_time" content="2018-04-15T03:08:04.283Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记 前端 JavaScript 项目积累">
 <meta name="twitter:description" content="window对象 window.location | 属性     | 描述                              || ——– | ——————————— || hash     | 从井号 (#) 开始的 URL（锚）       || host     | 主机名和当前 URL 的端口号         || hostname | 当前 URL 的主机名">
@@ -349,9 +349,13 @@
 <li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取到get请求的参数</span></span><br><span class="line"><span class="keyword">let</span> url = <span class="built_in">window</span>.location.search;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/[?&amp;][^?&amp;]+=[^?&amp;]+/g</span>;</span><br><span class="line"><span class="keyword">let</span> arr = url.match(reg);								<span class="comment">//['?id=111','&amp;name=222']</span></span><br><span class="line"><span class="keyword">if</span> (arr) &#123;</span><br><span class="line">    arr.forEach(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> tempArr = item.substring(<span class="number">1</span>).split(<span class="string">'='</span>);</span><br><span class="line">        <span class="comment">//将每个数组内容 拆分成一个新的数组，这个新的数组 [参数名,参数值]</span></span><br><span class="line">      <span class="keyword">let</span> key = <span class="built_in">decodeURIComponent</span>(tempArr[<span class="number">0</span>]);</span><br><span class="line">      <span class="keyword">let</span> val = <span class="built_in">decodeURIComponent</span>(tempArr[<span class="number">1</span>]);</span><br><span class="line">      obj[key] = val;</span><br><span class="line">        <span class="comment">//构造成一个对象</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>​</p>
-<p>​</p>
 </li>
 </ul>
+<h1 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h1><ol>
+<li><p><strong>event对象</strong></p>
+<p>​</p>
+</li>
+</ol>
 
       
     </div>
@@ -465,7 +469,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">26</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -522,7 +526,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#window对象"><span class="nav-number">1.</span> <span class="nav-text">window对象</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#window对象"><span class="nav-number">1.</span> <span class="nav-text">window对象</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#事件委托"><span class="nav-number"></span> <span class="nav-text">事件委托</span></a></div>
             
 
           </div>
