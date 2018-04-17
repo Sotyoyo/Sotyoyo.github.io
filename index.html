@@ -475,9 +475,152 @@
 </li>
 <li><p>在需要引用的地方调用：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//app.js</span><br><span class="line">var qqmapsdk;</span><br><span class="line">/**</span><br><span class="line"> * WeChat API 模块</span><br><span class="line"> * @type &#123;Object&#125;</span><br><span class="line"> * 用于将微信官方`API`封装为`Promise`方式</span><br><span class="line"> * &gt; 小程序支持以`CommonJS`规范组织代码结构</span><br><span class="line"> */</span><br><span class="line">const wechat = require(&apos;./utils/wechat.js&apos;)</span><br><span class="line">/**</span><br><span class="line"> * QQ API 模块</span><br><span class="line"> * @type &#123;Object&#125;</span><br><span class="line"> * 用于调用腾讯的地理位置API</span><br><span class="line"> */</span><br><span class="line">const QQMapWX = require(&apos;./utils/qqmap-wx-jssdk.js&apos;)</span><br><span class="line"></span><br><span class="line">App(&#123;</span><br><span class="line">  onLaunch: function () &#123;</span><br><span class="line">    // 实例化腾讯地图API核心类  </span><br><span class="line">    qqmapsdk = new QQMapWX(&#123;</span><br><span class="line">      key: &apos;BYCBZ-PWMHS-PRBOA-6MTOP-XZRAF-5JBLY&apos;//此处使用你自己申请的key  </span><br><span class="line">    &#125;);</span><br><span class="line">    wechat.getLocation().then(res =&gt; &#123;</span><br><span class="line">          const &#123; latitude, longitude &#125; = res</span><br><span class="line">          qqmapsdk.reverseGeocoder(&#123;</span><br><span class="line">            location: &#123; latitude, longitude &#125;,</span><br><span class="line">            success: res =&gt; &#123;</span><br><span class="line">              console.log(&quot;你的地理位置:\n&quot; + res.result.address);</span><br><span class="line">            &#125;,</span><br><span class="line">            fail: res =&gt; &#123;</span><br><span class="line">              console.log(res);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<p>​</p>
 </li>
 </ol>
+<h1 id="App-json"><a href="#App-json" class="headerlink" title="App.json"></a>App.json</h1><p>官方文档： <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/config.html" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/framework/config.html</a></p>
+<h2 id="tabbar"><a href="#tabbar" class="headerlink" title="tabbar"></a>tabbar</h2><p><code>tabBar</code>相关属性定义说明：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>必填</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 上的文字默认颜色</td>
+</tr>
+<tr>
+<td>selectedColor</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 上的文字选中时的颜色</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 的背景色</td>
+</tr>
+<tr>
+<td>borderStyle</td>
+<td>String</td>
+<td>否</td>
+<td>black</td>
+<td>tabbar上边框的颜色， 仅支持 black/white</td>
+</tr>
+<tr>
+<td>list</td>
+<td>Array</td>
+<td>是</td>
+<td></td>
+<td>tab 的列表，详见 list 属性说明，最少2个、最多5个 tab</td>
+</tr>
+<tr>
+<td>position</td>
+<td>String</td>
+<td>否</td>
+<td>bottom</td>
+<td>可选值 bottom、top</td>
+</tr>
+</tbody>
+</table>
+<p>tabBar list定义说明：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pagePath</td>
+<td>String</td>
+<td>是</td>
+<td>页面路径，必须在 pages 中先定义</td>
+</tr>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>是</td>
+<td>tab 上按钮文字</td>
+</tr>
+<tr>
+<td>iconPath</td>
+<td>String</td>
+<td>是</td>
+<td>图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px</td>
+</tr>
+<tr>
+<td>selectedIconPath</td>
+<td>String</td>
+<td>是</td>
+<td>选中时的图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px</td>
+</tr>
+</tbody>
+</table>
+<p>tabBar 是一个数组，只能配置<strong>最少2个、最多5个 tab</strong>，tab 按数组的顺序排序。</p>
+<h2 id="window"><a href="#window" class="headerlink" title="window"></a>window</h2><p><code>window</code>中的样式说明：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>navigationBarBackgroundColor</td>
+<td>HexColor</td>
+<td>000000 导航栏背景颜色，如”#000000”</td>
+<td></td>
+</tr>
+<tr>
+<td>navigationBarTextStyle</td>
+<td>String</td>
+<td>white</td>
+<td>导航栏标题颜色，仅支持 black/white</td>
+</tr>
+<tr>
+<td>navigationBarTitleText</td>
+<td>String</td>
+<td></td>
+<td>导航栏标题文字内容</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>HexColor</td>
+<td><code>#ffffff</code></td>
+<td>窗口的背景色</td>
+</tr>
+<tr>
+<td>backgroundTextStyle</td>
+<td>String</td>
+<td>dark</td>
+<td>下拉背景字体、loading 图的样式，仅支持 dark/light</td>
+</tr>
+<tr>
+<td>enablePullDownRefresh</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否开启下拉刷新</td>
+</tr>
+</tbody>
+</table>
 
           
         
