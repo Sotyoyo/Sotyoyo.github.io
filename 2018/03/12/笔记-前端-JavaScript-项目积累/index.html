@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Sotyoyo">
 <meta property="og:description" content="window对象 window.location | 属性     | 描述                              || ——– | ——————————— || hash     | 从井号 (#) 开始的 URL（锚）       || host     | 主机名和当前 URL 的端口号         || hostname | 当前 URL 的主机名">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-17T12:21:25.910Z">
+<meta property="og:updated_time" content="2018-04-29T02:27:46.061Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记 前端 JavaScript 项目积累">
 <meta name="twitter:description" content="window对象 window.location | 属性     | 描述                              || ——– | ——————————— || hash     | 从井号 (#) 开始的 URL（锚）       || host     | 主机名和当前 URL 的端口号         || hostname | 当前 URL 的主机名">
@@ -364,15 +364,16 @@
 </li>
 <li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.assign(</span><br><span class="line">	&#123;&#125;,</span><br><span class="line">	Zan.Field,</span><br><span class="line">	&#123;</span><br><span class="line">		data:&#123;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>​</p>
-</li>
 </ul>
 <ol>
 <li><p>Object.keys()</p>
 <p><code>返回键名数组</code></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 数组</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(arr));</span><br><span class="line"><span class="comment">// (3) ['0', '1', '2']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 类数组对象</span></span><br><span class="line"><span class="keyword">let</span> anObj = &#123; <span class="number">100</span>: <span class="string">'a'</span>, <span class="number">2</span>: <span class="string">'b'</span>, <span class="number">7</span>: <span class="string">'c'</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(anObj));</span><br><span class="line"><span class="comment">// (3) ['2', '7', '100']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 一般对象</span></span><br><span class="line"><span class="keyword">let</span> xyz = &#123;<span class="attr">z</span>: <span class="string">"zzz"</span>, <span class="attr">x</span>: <span class="string">"xxx"</span>, <span class="attr">y</span>: <span class="string">"yyy"</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(xyz));</span><br><span class="line"><span class="comment">// (3) ["z", "x", "y"]</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>​</p>
+<li><p>Array.prototype.slice.call(argument,0)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//转换成数组</span></span><br><span class="line"><span class="built_in">Array</span>.prototype.slice.call(_box_a_arr,<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>​JSON.stringfy() &amp; JSON.parse()</p>
 </li>
 </ol>
 <h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><ol>
