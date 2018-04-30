@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Sotyoyo">
 <meta property="og:description" content="语言核心字符集 用 unicode字符集编写，unicode是ASCII和Latin-1的超集  区分大小写，html的标签和属性在js中必须是小写  注释  1行尾 //行尾注释  123/**	段落注释*/    可选分号（如果语句单独成行，可省略分号，只有在缺少分号无法正常解析的时候，javascript会自动填补分号），在遇到 ()[]单独成行的时候，要注意是否和上一行组成了一个函数，所以">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-21T02:49:46.103Z">
+<meta property="og:updated_time" content="2018-04-30T08:38:34.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="笔记 前端 JavaScript 犀牛书">
 <meta name="twitter:description" content="语言核心字符集 用 unicode字符集编写，unicode是ASCII和Latin-1的超集  区分大小写，html的标签和属性在js中必须是小写  注释  1行尾 //行尾注释  123/**	段落注释*/    可选分号（如果语句单独成行，可省略分号，只有在缺少分号无法正常解析的时候，javascript会自动填补分号），在遇到 ()[]单独成行的时候，要注意是否和上一行组成了一个函数，所以">
@@ -376,7 +376,80 @@
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">javascript 中的作用域不是块级作用域(用花括号包围)，而是函数作用域(函数块包围)，js里面的变量声明，有声明提前，即把声明语句置顶，赋值顺序不变，保留原位：</span><br><span class="line">	<span class="built_in">console</span>.log(a);</span><br><span class="line">	<span class="keyword">var</span> a = <span class="string">"scope"</span>;</span><br><span class="line">	</span><br><span class="line">	相当于：</span><br><span class="line">	<span class="keyword">var</span> a;</span><br><span class="line">	<span class="built_in">console</span>.log(a);</span><br><span class="line">	a = <span class="string">"scope"</span>;</span><br></pre></td></tr></table></figure>
 <p>​</p>
 </li>
-<li><p>​</p>
+<li><p>js七种数据类型：<code>String</code>  <code>Object</code> <code>null</code>  <code>undefined</code>  <code>Array</code>  <code>Boolean</code>  <code>Number</code><br>js五种基本类型：<code>String</code> <code>Boolean</code> <code>Number</code> <code>null</code> <code>undefined</code><br>typeof六种返回格式：<code>&#39;string&#39;</code> <code>&#39;number&#39;</code>  <code>&#39;object&#39;</code> <code>&#39;function&#39;</code>  <code>&#39;boolean&#39;</code>  <code>&#39;undefined&#39;</code></p>
+</li>
+<li><p>Array对象常用方法中：</p>
+<p>一、 不改变原数组：</p>
+<p>1、 concat()</p>
+<ul>
+<li>连接两个或多个数组</li>
+<li><strong>不改变原数组</strong></li>
+<li>返回被连接数组的一个副本</li>
+</ul>
+<p>2、join()</p>
+<ul>
+<li>把数组中所有元素放入一个字符串</li>
+<li><strong>不改变原数组</strong></li>
+<li>返回字符串</li>
+</ul>
+<p>3、 slice()</p>
+<ul>
+<li>从已有的数组中返回选定的元素</li>
+<li><strong>不改变原数组</strong></li>
+<li>返回一个新数组</li>
+</ul>
+<p>4、 toString()</p>
+<ul>
+<li>把数组转为字符串</li>
+<li><strong>不改变原数组</strong></li>
+<li>返回数组的字符串形式</li>
+</ul>
+<p>二、改变原数组：</p>
+<p>5、 pop()</p>
+<ul>
+<li><p>删除数组最后一个元素，如果数组为空，则不改变数组，返回undefined</p>
+</li>
+<li><p>改变原数组</p>
+</li>
+<li><p>返回被删除的元素</p>
+</li>
+</ul>
+<p>6、 push()</p>
+<ul>
+<li>向数组末尾添加一个或多个元素</li>
+<li>改变原数组</li>
+<li>返回新数组的长度</li>
+</ul>
+<p>7、 reverse()</p>
+<ul>
+<li>颠倒数组中元素的顺序</li>
+<li>改变原数组</li>
+<li>返回该数组</li>
+</ul>
+<p>8、 shift()</p>
+<ul>
+<li>把数组的第一个元素删除，若空数组，不进行任何操作，返回undefined</li>
+<li>改变原数组</li>
+<li>返回第一个元素的值</li>
+</ul>
+<p>9、 sort()</p>
+<ul>
+<li>对数组元素进行排序(ascii)</li>
+<li>改变原数组</li>
+<li>返回该数组</li>
+</ul>
+<p>10、 splice()</p>
+<ul>
+<li>从数组中添加/删除项目</li>
+<li>改变原数组</li>
+<li>返回被删除的元素</li>
+</ul>
+<p>11、 unshift()</p>
+<ul>
+<li>向数组的开头添加一个或多个元素</li>
+<li>改变原数组</li>
+<li>返回新数组的长度</li>
+</ul>
 </li>
 </ol>
 
@@ -492,7 +565,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -503,7 +576,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -514,7 +587,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

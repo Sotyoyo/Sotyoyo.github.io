@@ -270,6 +270,521 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/笔记-分布式-预科一/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/02/笔记-分布式-预科一/" itemprop="url">笔记 分布式 预科一</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T19:53:41+08:00">
+                2018-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/分布式/" itemprop="url" rel="index">
+                    <span itemprop="name">分布式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h1><p>应用程序-系统调用-内核-硬件</p>
+<p>服务器性能指标:：运算速度 内存</p>
+<p>debian：极其稳定 适用于系统管理员和高级用户，不适合新手。</p>
+<p>Ubuntu：debian的衍生版，阉割版</p>
+<p>red hat：收费，第一款面向商业。</p>
+<p>centOs：基于 red hat ，与母版如出一辙。</p>
+<h1 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h1><h2 id="编辑-虚拟网络编辑器"><a href="#编辑-虚拟网络编辑器" class="headerlink" title="编辑-虚拟网络编辑器"></a>编辑-虚拟网络编辑器</h2><ul>
+<li><p>桥接模式：利用本机的有线网卡作为交换机进行外网链接，本机ip地址发生改变，桥接会断开。</p>
+</li>
+<li><p>仅主机：和本机共享网卡。</p>
+</li>
+<li><p>NAT模式：创建两个虚拟网卡，由虚拟网卡桥接本地网卡，不受本机ip地址的影响。</p>
+<p><a href="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0k8040j20f10dcjvi.jpg" target="_blank" rel="noopener"><img src="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0k8040j20f10dcjvi.jpg" alt="img"></a></p>
+<p><a href="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0kte67j20cr0dcn03.jpg" target="_blank" rel="noopener"><img src="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0kte67j20cr0dcn03.jpg" alt="img"></a></p>
+<p><a href="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0llg8dj20cu0dcdie.jpg" target="_blank" rel="noopener"><img src="http://wx3.sinaimg.cn/mw690/896d20a7gy1fmqh0llg8dj20cu0dcdie.jpg" alt="img"></a></p>
+</li>
+</ul>
+<h2 id="安装centOs"><a href="#安装centOs" class="headerlink" title="安装centOs"></a>安装centOs</h2><ul>
+<li><p>新建DVD，选择NAT</p>
+</li>
+<li><p>选择第一个install 回车</p>
+</li>
+<li><p>skip</p>
+</li>
+<li><p>傻瓜化设置</p>
+</li>
+<li><p>主机名不要带下划线和特殊符号</p>
+</li>
+<li><p>系统使用UTC 不勾选</p>
+</li>
+<li><p>创建自定义布局</p>
+<p><a href="http://wx4.sinaimg.cn/mw690/896d20a7gy1fmqh0jq1nkj20hs0cst99.jpg" target="_blank" rel="noopener"><img src="http://wx4.sinaimg.cn/mw690/896d20a7gy1fmqh0jq1nkj20hs0cst99.jpg" alt="img"></a></p>
+<ul>
+<li><p>/</p>
+<p><a href="http://wx2.sinaimg.cn/mw690/896d20a7gy1fmqh0itw72j20hs0csq3t.jpg" target="_blank" rel="noopener"><img src="http://wx2.sinaimg.cn/mw690/896d20a7gy1fmqh0itw72j20hs0csq3t.jpg" alt="img"></a></p>
+</li>
+<li><p>/swap</p>
+<p><a href="http://wx1.sinaimg.cn/mw690/896d20a7gy1fmqh0j8ztzj20hs0cswfb.jpg" target="_blank" rel="noopener"><img src="http://wx1.sinaimg.cn/mw690/896d20a7gy1fmqh0j8ztzj20hs0cswfb.jpg" alt="img"></a></p>
+</li>
+</ul>
+</li>
+<li><p>配置网络环境</p>
+<ul>
+<li>编辑IPV4</li>
+</ul>
+</li>
+</ul>
+<h1 id="linux目录详解"><a href="#linux目录详解" class="headerlink" title="linux目录详解"></a>linux目录详解</h1><ul>
+<li><p><strong>/ - Root</strong></p>
+<p>通常称为根分区。所有的文件和目录皆由此开始。只有root用户对此目录拥有写权限。</p>
+</li>
+<li><p><strong>/bin - 用户可执行文件</strong></p>
+<p>此目录包含二进制可执行文件。在单用户模式下Linux使用此目录的命令。此目录包含所有用户的常用命令，如ls、ping、cp等。</p>
+</li>
+<li><p><strong>/sbin - 系统可执行文件</strong></p>
+<p>此目录中的命令主要供系统管理员使用，以进行系统维护。例如，iptables、reboot、fdisk等。</p>
+</li>
+<li><p><strong>/etc - 配置文件</strong></p>
+<p>包含所有应用程序的配置文件，也包含启动、关闭某个特定程序的脚本，例如，/etc/resolv.conf、/etc/logrotate.conf等。</p>
+</li>
+<li><p><strong>/dev - 设备文件</strong></p>
+<p>包含设备文件。在Linux中，一切都被看做文件。终端设备、USB、磁盘等等都被看做文件，如/dev/usbmon0。</p>
+</li>
+<li><p><strong>/proc - 进程信息</strong></p>
+<p>所有系统进程的信息都包含在/proc目录中。/proc目录并不是一个真正的文件系统，而是包含了运行中的进程信息。例如，/proc目录包含了进程信息。/proc目录也包含了系统资源信息，如/proc/uptime包含了最近一次启动至今的正常运行时间，/proc/cpuinfo包含了处理器信息等。</p>
+</li>
+<li><p><strong>/var - 变量文件</strong></p>
+<p>/var是一个可增长的目录，包含变量文件。例如，/var/log（系统日志）、/var/lib （包文件） 、/var/mail（邮件）、/var/spool （打印队列）。</p>
+</li>
+<li><p><strong>/usr - 用户程序</strong></p>
+<p>为用户应用程序存放可执行文件、源代码和文档。/usr/bin包含了用户可执行文件，如at、awk、cc等。/usr/sbin包含了系统管理员可执行文件，如cron、sshd、useradd等。/usr/local包含了用户编译源代码安装的应用程序，如/usr/local/apache2。</p>
+</li>
+<li><p><strong>/home - 用户主目录</strong></p>
+<p>存放用户的私人文件。</p>
+</li>
+<li><p><strong>/boot - 启动加载文件</strong></p>
+<p>Linux系统启动时需要加载的文件。Kernel initrd、grub等文件都存放在此。</p>
+</li>
+<li><p><strong>/lib - 系统库文件</strong></p>
+<p>/bin和/sbin中的可执行文件需要/lib中库文件的支持。库文件通常以“ld”或“ld*.so”的形式命名，如ld-2.11.1.so。</p>
+</li>
+<li><p><strong>/opt - 可选应用</strong></p>
+<p>/opt用于安装独立软件商的可选应用。</p>
+</li>
+<li><p><strong>/mnt - 挂载目录</strong></p>
+<p>挂载点，系统管理员可用于临时挂载文件系统。</p>
+</li>
+<li><p><strong>/media - 可移动媒体设备</strong></p>
+<p>挂载可移动媒体设备，如/media/cdrom、/media/floppy等。</p>
+</li>
+<li><p><strong>/srv - 服务数据</strong></p>
+<p>Srv表示服务，用于服务器的所有服务数据存储在此目录中。</p>
+</li>
+</ul>
+<h1 id="linux命令（格式：command-【option】【arguments】）"><a href="#linux命令（格式：command-【option】【arguments】）" class="headerlink" title="linux命令（格式：command 【option】【arguments】）"></a>linux命令（格式：command 【option】【arguments】）</h1><ul>
+<li><p>su 切换到管理员用户</p>
+</li>
+<li><p>shutdown -h now 立即关机<br>shutdown -h 23:00 //23:00关机<br>shutdown -h 20 //20分钟后关机<br>shutdown -t //秒<br>shutdown -r 10 //十分钟后重启<br>shutdown -c //撤销shutdown命令</p>
+</li>
+<li><p>groupadd hadoop 创建用户组</p>
+</li>
+<li><p>useradd -g hadoop hadoopUser 创建hadoop用户加入到hadoop用户组中</p>
+</li>
+<li><p>passwd hadoopUser 修改用户密码</p>
+</li>
+<li><p>ls -a , ls -all , ls -l</p>
+</li>
+<li><p>cp -r 被复制的 新目录</p>
+</li>
+<li><p>rm -rf 文件名 -f强制删除 -r递归删除</p>
+</li>
+<li><p>mv 被复制的 新目录 移动和重命名</p>
+</li>
+<li><p>cat（全部显示） more（部分显示） od（二进制查看）</p>
+</li>
+<li><blockquote>
+<blockquote>
+<p>追加 &gt; 覆盖</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>tar -c打包 -x解压缩 -z压缩 -f给出文档名</p>
+</li>
+<li><p>tar -zcf 文件名 新文件名</p>
+</li>
+</ul>
+<h1 id="Linux-文件权限状态"><a href="#Linux-文件权限状态" class="headerlink" title="Linux 文件权限状态"></a>Linux 文件权限状态</h1><ul>
+<li><p>总共十位</p>
+</li>
+<li><p>第一位 d/- d代表目录，-代表文件</p>
+</li>
+<li><p>后九位，每三个为一组 r代表read读取，w代表write写入，x代表执行，-代表没有</p>
+<blockquote>
+<p>第一组代表文件所有者的权限</p>
+<p>第二组代表文件所属用户组权限</p>
+<p>第三组代表其他人对该文件的权限</p>
+<blockquote>
+<p>改变文件用户组：chgrp 组名 文件 默认不影响子文件  chgrp -R 递归处理所有的子目录和文件<br>改变文件用户：  chown -R 所有者:组名<br>改变文件权限状态：</p>
+<pre><code>chmod 数字参数 文件名
+    r = 4 , w = 2 , x = 1 , - = 0  每一组，相加得数字参数，一共三个
+    例如：rwxrwxrwx = 777
+chmod 字母参数 文件名
+    user(u) group(g) other(o) all(a)
+chmod u+w 文件名  //给所有者添加写入权限
+chmod o-w 文件名  //给其让人删除写入权限
+</code></pre></blockquote>
+</blockquote>
+</li>
+</ul>
+<h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><p><a href="http://wx4.sinaimg.cn/mw690/896d20a7gy1fmqqmifomoj20hs083myb.jpg" target="_blank" rel="noopener"><img src="http://wx4.sinaimg.cn/mw690/896d20a7gy1fmqqmifomoj20hs083myb.jpg" alt="img"></a></p>
+<p>ps aux | grep crond</p>
+<p>pstree</p>
+<p>kill -9 PID</p>
+<p>常用信号，参数</p>
+<p><a href="http://wx2.sinaimg.cn/mw690/896d20a7gy1fmqprtyv2gj20hs0bzjsj.jpg" target="_blank" rel="noopener"><img src="http://wx2.sinaimg.cn/mw690/896d20a7gy1fmqprtyv2gj20hs0bzjsj.jpg" alt="img"></a></p>
+<p>bg 后台继续运行暂停的进程</p>
+<p>fg 把后台进程发送到前台</p>
+<h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><h1 id="数据库管理系统DBMS"><a href="#数据库管理系统DBMS" class="headerlink" title="数据库管理系统DBMS"></a>数据库管理系统DBMS</h1><h2 id="线程池"><a href="#线程池" class="headerlink" title="线程池"></a>线程池</h2><h2 id="SQL接口"><a href="#SQL接口" class="headerlink" title="SQL接口"></a>SQL接口</h2><h2 id="解析器"><a href="#解析器" class="headerlink" title="解析器"></a>解析器</h2><h2 id="查询优化器"><a href="#查询优化器" class="headerlink" title="查询优化器"></a>查询优化器</h2><h2 id="缓存和缓冲池和具体引擎的缓存和缓冲池子"><a href="#缓存和缓冲池和具体引擎的缓存和缓冲池子" class="headerlink" title="缓存和缓冲池和具体引擎的缓存和缓冲池子"></a>缓存和缓冲池和具体引擎的缓存和缓冲池子</h2><h2 id="数据库引擎"><a href="#数据库引擎" class="headerlink" title="数据库引擎"></a>数据库引擎</h2>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/笔记-前端-jquery学习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/02/笔记-前端-jquery学习/" itemprop="url">笔记 前端 jquery学习</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T19:51:38+08:00">
+                2018-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="jQuery"><a href="#jQuery" class="headerlink" title="jQuery :"></a>jQuery :</h2><p> 1.12.4: <a href="https://cdn.bootcss.com/jquery/1.12.4/jquery.js" target="_blank" rel="noopener">https://cdn.bootcss.com/jquery/1.12.4/jquery.js</a></p>
+<p> 2.2.3: <a href="https://cdn.bootcss.com/jquery/2.2.3/jquery.js" target="_blank" rel="noopener">https://cdn.bootcss.com/jquery/2.2.3/jquery.js</a></p>
+<p> 3.2.1: <a href="https://cdn.bootcss.com/jquery/3.2.1/jquery.js" target="_blank" rel="noopener">https://cdn.bootcss.com/jquery/3.2.1/jquery.js</a></p>
+<h2 id="JQ向DOM对象转换："><a href="#JQ向DOM对象转换：" class="headerlink" title="JQ向DOM对象转换："></a>JQ向DOM对象转换：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#id&quot;).get(0).innerHTML = &quot;内容&quot;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#id&quot;)[0].innerHTML = &quot;内容&quot;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/jquery对象实际上是一个DOM对象数组</span><br></pre></td></tr></table></figure>
+<h2 id="DOM对象向JQ转换："><a href="#DOM对象向JQ转换：" class="headerlink" title="DOM对象向JQ转换："></a>DOM对象向JQ转换：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var DomObject = document.getElementById(&quot;id&quot;);</span><br><span class="line">$(DomObject).html(&quot;内容&quot;);</span><br></pre></td></tr></table></figure>
+<h2 id="JQ的常用知识宝典："><a href="#JQ的常用知识宝典：" class="headerlink" title="JQ的常用知识宝典："></a>JQ的常用知识宝典：</h2><blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_events.asp" target="_blank" rel="noopener">jQuery 触发事件整合</a></p>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_selectors.asp" target="_blank" rel="noopener">jQuery 选择器整合</a></p>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_effects.asp" target="_blank" rel="noopener">jQuery 效果整合</a></p>
+<blockquote>
+<p>.animate(<em>styles,speed,easing,callback</em>) .hide() .show() .toggle()</p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp" target="_blank" rel="noopener">jQuery 节点操作整合</a></p>
+<blockquote>
+<p>.insertBefore() .insertAfter() .clone() .append() .appendTo()</p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_attributes.asp" target="_blank" rel="noopener">jQuery 属性操作整合</a></p>
+<blockquote>
+<p>.addClass() .attr() .removeClass() .removeAttr() .val()</p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_css.asp" target="_blank" rel="noopener">jQuery CSS操作整合</a></p>
+<blockquote>
+<p>.css() .height() .width() .offset() .offsetParent() .position()</p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_traversing.asp" target="_blank" rel="noopener">jQuery 遍历操作整合</a></p>
+<blockquote>
+<p>.each() .add() .children() .closest() .find() .is() .first() .next() .nextAll() .prev() .prevAll .not() .sibilings() .slice() .contents() .eq()</p>
+</blockquote>
+<p><a href="http://www.w3school.com.cn/jquery/jquery_ref_ajax.asp" target="_blank" rel="noopener">jQuery AJAX操作整合</a></p>
+</blockquote>
+<h2 id="JQ小操作："><a href="#JQ小操作：" class="headerlink" title="JQ小操作："></a>JQ小操作：</h2><ol>
+<li><p>全选/全不选</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$(&quot;#ConInput&quot;).click(function()&#123;</span><br><span class="line">  $(&quot;#form &gt; input&quot;).attr(&quot;checked&quot;,this.checked);</span><br><span class="line">  /在1.8.3以下有效</span><br><span class="line">  $(&quot;#form &gt; input&quot;).prop(&quot;checked&quot;,this.checked);</span><br><span class="line">  /只在1.6版本以后有效</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>省市联动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var $cities = &#123;</span><br><span class="line">	&quot;sh&quot;:[&quot;普陀区&quot;,&quot;静安区&quot;,&quot;浦东新区&quot;,&quot;黄埔区&quot;],</span><br><span class="line">	&quot;js&quot;:[&quot;无锡&quot;,&quot;苏州&quot;,&quot;南京&quot;,&quot;扬州&quot;,&quot;高邮&quot;,&quot;镇江&quot;],</span><br><span class="line">	&quot;bj&quot;:[&quot;海淀区&quot;,&quot;清华&quot;,&quot;北大&quot;],</span><br><span class="line">	&quot;zj&quot;:[&quot;义乌&quot;,&quot;慈溪&quot;,&quot;杭州&quot;]</span><br><span class="line">&#125;</span><br><span class="line">$(&quot;#province&quot;).change(function()&#123;</span><br><span class="line">	$.each($cities,function(name,pro)&#123;</span><br><span class="line">		if(name == $(&quot;#province&quot;).val())&#123;</span><br><span class="line">				$(&quot;#city&quot;).empty();</span><br><span class="line">				$.each(pro,function(j,cit)&#123;</span><br><span class="line">				$(&quot;&lt;option&gt;&lt;/option&gt;&quot;).html(cit).appendTo($(&quot;#city&quot;));</span><br><span class="line">			&#125;)</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>菜单显示</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$(function()&#123;</span><br><span class="line">  $(&quot;#menu&quot;).mouseover(function()&#123;</span><br><span class="line">    $(&quot;#menu li:first&quot;).nextAll().show();</span><br><span class="line">  &#125;);</span><br><span class="line">  $(&quot;#menu&quot;).mouseout(function()&#123;</span><br><span class="line">    $(&quot;#menu li:first&quot;).nextAll().hide();</span><br><span class="line">  &#125;);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
+<h2 id="JQ插件和-JQ-UI-："><a href="#JQ插件和-JQ-UI-：" class="headerlink" title="JQ插件和 JQ-UI ："></a>JQ插件和 JQ-UI ：</h2><ol>
+<li><p>jQuery-validation</p>
+<p>下载地址：<a href="https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js" target="_blank" rel="noopener">https://cdn.bootcss.com/jquery-validate/1.17.0/jquery.validate.js</a></p>
+<p>教程地址：<a href="http://www.runoob.com/jquery/jquery-plugin-validate.html" target="_blank" rel="noopener">http://www.runoob.com/jquery/jquery-plugin-validate.html</a></p>
+</li>
+<li><p>jQuery-UI</p>
+<p>下载地址：<a href="http://jqueryui.com/download/#!" target="_blank" rel="noopener">http://jqueryui.com/download/#!</a></p>
+<p>教程地址：<a href="http://www.runoob.com/jqueryui/jqueryui-tutorial.html" target="_blank" rel="noopener">http://www.runoob.com/jqueryui/jqueryui-tutorial.html</a></p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/笔记-j2ee-servlet之间的跳转与传值/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -747,163 +1262,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/01/Windows下git和ssh的安装和使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/01/Windows下git和ssh的安装和使用/" itemprop="url">Windows下git和ssh的安装和使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T00:00:00+08:00">
-                2018-02-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/Windows/" itemprop="url" rel="index">
-                    <span itemprop="name">Windows</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>windows安装git和ssh key配置的方法</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/01/Windows下git和ssh的安装和使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/01/Windows下nvm,node,npm安装和使用/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1206,6 +1564,163 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/01/Windows下git和ssh的安装和使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/01/Windows下git和ssh的安装和使用/" itemprop="url">Windows下git和ssh的安装和使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T00:00:00+08:00">
+                2018-02-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/Windows/" itemprop="url" rel="index">
+                    <span itemprop="name">Windows</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>windows安装git和ssh key配置的方法</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/01/Windows下git和ssh的安装和使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -1256,7 +1771,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">26</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1267,7 +1782,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1278,7 +1793,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
