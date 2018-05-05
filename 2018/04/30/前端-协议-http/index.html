@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="三次握手报文header 大小： &amp;lt;32k body 大小： &amp;lt;2G 四次挥手">
+<meta name="description" content="三次握手报文header 大小： &amp;lt;32k body 大小： &amp;lt;1G 四次挥手FormMethodget 数据量小，缓存，看的见 post、put 数据量大，不会缓存，看不见 DELETE 删除东西，数据量小 HEAD 让服务器只发送头回来，用来检测服务器是否存活 enctype(encoding-type) application/x-www-form-urlencoded(默认)">
 <meta name="keywords" content="前端,协议,http">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前端 协议 http">
 <meta property="og:url" content="http://yoursite.com/2018/04/30/前端-协议-http/index.html">
 <meta property="og:site_name" content="Sotyoyo">
-<meta property="og:description" content="三次握手报文header 大小： &amp;lt;32k body 大小： &amp;lt;2G 四次挥手">
+<meta property="og:description" content="三次握手报文header 大小： &amp;lt;32k body 大小： &amp;lt;1G 四次挥手FormMethodget 数据量小，缓存，看的见 post、put 数据量大，不会缓存，看不见 DELETE 删除东西，数据量小 HEAD 让服务器只发送头回来，用来检测服务器是否存活 enctype(encoding-type) application/x-www-form-urlencoded(默认)">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-04-30T07:35:53.038Z">
+<meta property="og:updated_time" content="2018-05-05T06:47:05.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端 协议 http">
-<meta name="twitter:description" content="三次握手报文header 大小： &amp;lt;32k body 大小： &amp;lt;2G 四次挥手">
+<meta name="twitter:description" content="三次握手报文header 大小： &amp;lt;32k body 大小： &amp;lt;1G 四次挥手FormMethodget 数据量小，缓存，看的见 post、put 数据量大，不会缓存，看不见 DELETE 删除东西，数据量小 HEAD 让服务器只发送头回来，用来检测服务器是否存活 enctype(encoding-type) application/x-www-form-urlencoded(默认)">
 
 
 
@@ -376,8 +376,17 @@
         <h1 id="三次握手"><a href="#三次握手" class="headerlink" title="三次握手"></a>三次握手</h1><h1 id="报文"><a href="#报文" class="headerlink" title="报文"></a>报文</h1><p><code>header</code></p>
 <p>大小： &lt;32k</p>
 <p><code>body</code></p>
-<p>大小： &lt;2G</p>
-<h1 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h1>
+<p>大小： &lt;1G</p>
+<h1 id="四次挥手"><a href="#四次挥手" class="headerlink" title="四次挥手"></a>四次挥手</h1><h1 id="Form"><a href="#Form" class="headerlink" title="Form"></a>Form</h1><h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><p>get 数据量小，缓存，看的见</p>
+<p>post、put 数据量大，不会缓存，看不见</p>
+<p>DELETE 删除东西，数据量小</p>
+<p>HEAD 让服务器只发送头回来，用来检测服务器是否存活</p>
+<h2 id="enctype-encoding-type"><a href="#enctype-encoding-type" class="headerlink" title="enctype(encoding-type)"></a>enctype(encoding-type)</h2><ol>
+<li>application/x-www-form-urlencoded(默认)  名字=值&amp;名字=值  -小数据</li>
+<li>multipart/form-data 把整个body切分成很多块                             -文件上传，大数据 </li>
+</ol>
+<p># </p>
+
       
     </div>
     
@@ -500,7 +509,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -557,7 +566,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#三次握手"><span class="nav-number">1.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#报文"><span class="nav-number">2.</span> <span class="nav-text">报文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四次挥手"><span class="nav-number">3.</span> <span class="nav-text">四次挥手</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#三次握手"><span class="nav-number">1.</span> <span class="nav-text">三次握手</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#报文"><span class="nav-number">2.</span> <span class="nav-text">报文</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四次挥手"><span class="nav-number">3.</span> <span class="nav-text">四次挥手</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Form"><span class="nav-number">4.</span> <span class="nav-text">Form</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Method"><span class="nav-number">4.1.</span> <span class="nav-text">Method</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#enctype-encoding-type"><span class="nav-number">4.2.</span> <span class="nav-text">enctype(encoding-type)</span></a></li></ol></li></ol></div>
             
 
           </div>

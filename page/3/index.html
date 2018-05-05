@@ -270,6 +270,204 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/Mac下vmware-fusion的NAT网络配置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/02/Mac下vmware-fusion的NAT网络配置/" itemprop="url">Mac下vmware-fusion的NAT网络配置</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T19:59:00+08:00">
+                2018-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/系统/" itemprop="url" rel="index">
+                    <span itemprop="name">系统</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>引用地址</strong>：<a href="http://blog.csdn.net/zhishengqianjun/article/details/77046796" target="_blank" rel="noopener">http://blog.csdn.net/zhishengqianjun/article/details/77046796</a></p>
+<h2 id="Mac-VMware-Fusion"><a href="#Mac-VMware-Fusion" class="headerlink" title="Mac VMware Fusion"></a>Mac VMware Fusion</h2><p>​       我们在使用虚拟机的时候，经常遇到这样的问题，我们会换地方，ip会变化，如果虚拟机使用桥接的方式，那么很多与ip相关的服务都会出现问题，所以我们希望使用nat模式，不过遗憾的是，在Windows下，VMware配置nat十分之方便，但是在Mac下，却有点麻烦，因为默认情况下，不支持我们配置静态ip，这对于我们来说就不太方便了。</p>
+<h2 id="Fusion配置Nat静态IP"><a href="#Fusion配置Nat静态IP" class="headerlink" title="Fusion配置Nat静态IP"></a>Fusion配置Nat静态IP</h2><h3 id="创建Nat网络"><a href="#创建Nat网络" class="headerlink" title="创建Nat网络"></a>创建Nat网络</h3><p>​       首先我们进入VMware Fusion的配置界面（快捷键是Command+,），然后打开网络配置：</p>
+<p><img src="http://blog.csdn.net/zhishengqianjun/article/details/images/net2.png" alt="img"><br><img src="http://img.blog.csdn.net/20170810110820522?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       如上图，首先点击锁的按钮，进行解锁，需要输入密码才可以；</p>
+<p><img src="http://img.blog.csdn.net/20170810110835994?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       然后，我们点击<code>+</code>号，增加一个网络，在这里显示的是<code>vmnet2</code>，在其他机器可能是3，这一点不影响，然后，将上图所示的3代表的选项选中，将下面的DHCP的选项取消。</p>
+<p> （<strong>注意</strong>：要配置静态ip，一定要取消DHCP选项！）</p>
+<h3 id="修改Nat网络配置"><a href="#修改Nat网络配置" class="headerlink" title="修改Nat网络配置"></a>修改Nat网络配置</h3><p>​       然后，我们需要打开终端；</p>
+<p>​       进入下面的目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /Library/Preferences/VMware\ Fusion/1</span><br></pre></td></tr></table></figure>
+<p>​       ( <strong>注意</strong>：在路径中出现空格需要用<code>\</code>转义)</p>
+<p><img src="http://img.blog.csdn.net/20170810110954965?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       然后我们就能看到上面的配置文件，首先打开<code>networking</code>:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim networking1</span><br></pre></td></tr></table></figure>
+<p>​       （<strong>注意</strong>：没有<code>vim</code>的用<code>vi</code>，一定记得加<code>sudo</code>，需要<code>root</code>权限才能修改）</p>
+<p><img src="http://img.blog.csdn.net/20170810111123307?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       如上图，<code>VNET_2</code>开头的配置就是我们创建的那块网卡，标号为1的是子网掩码，标号为2的是子网地址，注意，是子网地址！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">补充：</span><br><span class="line">    通过子网掩码划分子网，比如说3个255：</span><br><span class="line">        11111111.11111111.11111111.00000000</span><br><span class="line">    然后我们有一个ip，与上面的子网掩码进行与操作，如果是一样的，那么就代表是在一个网段中；</span><br><span class="line">    例如，192.168.2.1，192.168.2.2就是一个网段；</span><br><span class="line">    但是，192.168.2.1，192.168.3.2就不是一个网段，进行与操作以后，有个3是不一样的。</span><br><span class="line">    子网地址是子网的第一个地址，也就是说，如果是255.255.255.0，那么指望地址就是*.*.*.0，前面的*可以自己配置。1234567</span><br></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170810122643484?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       然后我们进入<code>vmnet2</code>，看到上图所示的配置文件；</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim nat.conf1</span><br></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170810122705442?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       如上图所示，修改这里的配置即可，第一个是ip，这里的ip的网关，下面的是子网，与前面的子网掩码保持一致，上面的ip除了子网的第一个和最后一个ip不能用，其他都可以用，这里我们配置为<code>192.168.2.2</code>。</p>
+<p> 还有一个重要的步骤，重新打开VMware的网络配置，如下图：</p>
+<p><img src="http://img.blog.csdn.net/20170810122851620?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       为了让VMware更新我们手动修改的配置，首先我们选中这个网络，然后将2所示的选项取消选中，这是后3会被点亮，点击应用，然后在将2选中，再点击应用，这样网络配置就更新了。</p>
+<p> （实际上不更改配置，就是为了点击应用，让VMware更新一下配置）</p>
+<h3 id="虚拟机网络配置"><a href="#虚拟机网络配置" class="headerlink" title="虚拟机网络配置"></a>虚拟机网络配置</h3><p>​       接下来，我们来配置一下虚拟机，目前我装的是<code>CentOS 7.3 1611</code>，首先打开虚拟机的配置选项(快捷键是Command</p>
+<p>+E)：</p>
+<p><img src="http://img.blog.csdn.net/20170810122921632?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       打开网络，显示下图所示的选项：</p>
+<p><img src="http://img.blog.csdn.net/20170810123156577?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       然后选中我们配置的网络：<code>vmnet2</code>。</p>
+<h3 id="虚拟机网络配置-1"><a href="#虚拟机网络配置-1" class="headerlink" title="虚拟机网络配置"></a>虚拟机网络配置</h3><p> 然后我们打开虚拟机，进入下面的目录，找到网卡的配置文件：</p>
+<p><img src="http://img.blog.csdn.net/20170810124007817?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       打开网卡的配置文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi ifcfg-ens331</span><br></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170810125620393?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       如上图，其中子网掩码要与之前保持一致，然后ip只要在同一网段就可以，网关和DNS配置到我们之前配置的网关上去。</p>
+<p>​       重启网络生效：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart network1</span><br></pre></td></tr></table></figure>
+<p>​       查看ip:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ip a1</span><br></pre></td></tr></table></figure>
+<p><img src="http://img.blog.csdn.net/20170810125650257?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvemhpc2hlbmdxaWFuanVu/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
+<p>​       至此就大功告成了！</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/笔记-分布式-预科一/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1419,6 +1617,163 @@ chmod o-w 文件名  //给其让人删除写入权限
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/01/Windows下git和ssh的安装和使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/02/01/Windows下git和ssh的安装和使用/" itemprop="url">Windows下git和ssh的安装和使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T00:00:00+08:00">
+                2018-02-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/Windows/" itemprop="url" rel="index">
+                    <span itemprop="name">Windows</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>windows安装git和ssh key配置的方法</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/01/Windows下git和ssh的安装和使用/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/01/Mac下hexo博客框架的详细搭建/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1564,163 +1919,6 @@ chmod o-w 文件名  //给其让人删除写入权限
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/01/Windows下git和ssh的安装和使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/01/Windows下git和ssh的安装和使用/" itemprop="url">Windows下git和ssh的安装和使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T00:00:00+08:00">
-                2018-02-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/Windows/" itemprop="url" rel="index">
-                    <span itemprop="name">Windows</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>windows安装git和ssh key配置的方法</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/01/Windows下git和ssh的安装和使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -1771,7 +1969,7 @@ chmod o-w 文件名  //给其让人删除写入权限
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">28</span>
+                <span class="site-state-item-count">29</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
