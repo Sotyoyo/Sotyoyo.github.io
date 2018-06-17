@@ -270,6 +270,421 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/06/笔记-配置-eclipse/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/06/笔记-配置-eclipse/" itemprop="url">笔记 配置 eclipse</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-06T15:03:16+08:00">
+                2018-03-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="code-template-导入模板"><a href="#code-template-导入模板" class="headerlink" title="code template 导入模板"></a>code template 导入模板</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;<span class="tag">&lt;<span class="name">templates</span>&gt;</span><span class="tag">&lt;<span class="name">template</span> <span class="attr">autoinsert</span>=<span class="string">"false"</span> <span class="attr">context</span>=<span class="string">"fieldcomment_context"</span> <span class="attr">deleted</span>=<span class="string">"false"</span> <span class="attr">description</span>=<span class="string">"Comment for fields"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> <span class="attr">id</span>=<span class="string">"org.eclipse.jdt.ui.text.codetemplates.fieldcomment"</span> <span class="attr">name</span>=<span class="string">"fieldcomment"</span>&gt;</span>/**  </span><br><span class="line">* @Fields $&#123;field&#125; : $&#123;todo&#125;</span><br><span class="line">*/  <span class="tag">&lt;/<span class="name">template</span>&gt;</span><span class="tag">&lt;<span class="name">template</span> <span class="attr">autoinsert</span>=<span class="string">"false"</span> <span class="attr">context</span>=<span class="string">"gettercomment_context"</span> <span class="attr">deleted</span>=<span class="string">"false"</span> <span class="attr">description</span>=<span class="string">"Comment for getter method"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> <span class="attr">id</span>=<span class="string">"org.eclipse.jdt.ui.text.codetemplates.gettercomment"</span> <span class="attr">name</span>=<span class="string">"gettercomment"</span>&gt;</span>/**  </span><br><span class="line">* @return $&#123;bare_field_name&#125;  </span><br><span class="line">*/<span class="tag">&lt;/<span class="name">template</span>&gt;</span><span class="tag">&lt;<span class="name">template</span> <span class="attr">autoinsert</span>=<span class="string">"false"</span> <span class="attr">context</span>=<span class="string">"filecomment_context"</span> <span class="attr">deleted</span>=<span class="string">"false"</span> <span class="attr">description</span>=<span class="string">"Comment for created Java files"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> <span class="attr">id</span>=<span class="string">"org.eclipse.jdt.ui.text.codetemplates.filecomment"</span> <span class="attr">name</span>=<span class="string">"filecomment"</span>&gt;</span>/**    </span><br><span class="line">* @Title: $&#123;file_name&#125;  </span><br><span class="line">* @Package $&#123;package_name&#125;  </span><br><span class="line">* @author Sotyoyo    </span><br><span class="line">* @date $&#123;date&#125; $&#123;time&#125;  </span><br><span class="line">* @version V1.0</span><br><span class="line">* Copyright (c) $&#123;year&#125;, "https://sotyoyo.github.com" All Rights Reserved.    </span><br><span class="line">*/<span class="tag">&lt;/<span class="name">template</span>&gt;</span><span class="tag">&lt;<span class="name">template</span> <span class="attr">autoinsert</span>=<span class="string">"false"</span> <span class="attr">context</span>=<span class="string">"typecomment_context"</span> <span class="attr">deleted</span>=<span class="string">"false"</span> <span class="attr">description</span>=<span class="string">"Comment for created types"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> <span class="attr">id</span>=<span class="string">"org.eclipse.jdt.ui.text.codetemplates.typecomment"</span> <span class="attr">name</span>=<span class="string">"typecomment"</span>&gt;</span>/**  </span><br><span class="line">* @ClassName: $&#123;type_name&#125;  </span><br><span class="line">* @Description: $&#123;todo&#125;  </span><br><span class="line">* @author Sotyoyo </span><br><span class="line">* @date $&#123;date&#125; $&#123;time&#125;  </span><br><span class="line">*  </span><br><span class="line">* $&#123;tags&#125;  </span><br><span class="line">*/<span class="tag">&lt;/<span class="name">template</span>&gt;</span><span class="tag">&lt;<span class="name">template</span> <span class="attr">autoinsert</span>=<span class="string">"false"</span> <span class="attr">context</span>=<span class="string">"delegatecomment_context"</span> <span class="attr">deleted</span>=<span class="string">"false"</span> <span class="attr">description</span>=<span class="string">"Comment for delegate methods"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> <span class="attr">id</span>=<span class="string">"org.eclipse.jdt.ui.text.codetemplates.delegatecomment"</span> <span class="attr">name</span>=<span class="string">"delegatecomment"</span>&gt;</span>/**  </span><br><span class="line">* $&#123;tags&#125;  </span><br><span class="line">* $&#123;see_to_target&#125;  </span><br><span class="line">*/  <span class="tag">&lt;/<span class="name">template</span>&gt;</span><span class="tag">&lt;<span class="name">template</span> <span class="attr">autoinsert</span>=<span class="string">"false"</span> <span class="attr">context</span>=<span class="string">"overridecomment_context"</span> <span class="attr">deleted</span>=<span class="string">"false"</span> <span class="attr">description</span>=<span class="string">"Comment for overriding methods"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> <span class="attr">id</span>=<span class="string">"org.eclipse.jdt.ui.text.codetemplates.overridecomment"</span> <span class="attr">name</span>=<span class="string">"overridecomment"</span>&gt;</span>/*  </span><br><span class="line">* &amp;lt;p&amp;gt;Title: $&#123;enclosing_method&#125;&amp;lt;/p&amp;gt;  </span><br><span class="line">* &amp;lt;p&amp;gt;Description: &amp;lt;/p&amp;gt;  </span><br><span class="line">* $&#123;tags&#125;  </span><br><span class="line">* $&#123;see_to_overridden&#125;  </span><br><span class="line">*/<span class="tag">&lt;/<span class="name">template</span>&gt;</span><span class="tag">&lt;<span class="name">template</span> <span class="attr">autoinsert</span>=<span class="string">"false"</span> <span class="attr">context</span>=<span class="string">"constructorcomment_context"</span> <span class="attr">deleted</span>=<span class="string">"false"</span> <span class="attr">description</span>=<span class="string">"Comment for created constructors"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> <span class="attr">id</span>=<span class="string">"org.eclipse.jdt.ui.text.codetemplates.constructorcomment"</span> <span class="attr">name</span>=<span class="string">"constructorcomment"</span>&gt;</span>/**  </span><br><span class="line">* &amp;lt;p&amp;gt;Title: &amp;lt;/p&amp;gt;  </span><br><span class="line">* &amp;lt;p&amp;gt;Description: &amp;lt;/p&amp;gt;  </span><br><span class="line">* $&#123;tags&#125;  </span><br><span class="line">*/<span class="tag">&lt;/<span class="name">template</span>&gt;</span><span class="tag">&lt;<span class="name">template</span> <span class="attr">autoinsert</span>=<span class="string">"false"</span> <span class="attr">context</span>=<span class="string">"methodcomment_context"</span> <span class="attr">deleted</span>=<span class="string">"false"</span> <span class="attr">description</span>=<span class="string">"Comment for non-overriding methods"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> <span class="attr">id</span>=<span class="string">"org.eclipse.jdt.ui.text.codetemplates.methodcomment"</span> <span class="attr">name</span>=<span class="string">"methodcomment"</span>&gt;</span>/**  </span><br><span class="line">* @Title: $&#123;enclosing_method&#125;  </span><br><span class="line">* @Description: $&#123;todo&#125;  </span><br><span class="line">* @param $&#123;tags&#125;</span><br><span class="line">* @return $&#123;return_type&#125; </span><br><span class="line">* @throws  </span><br><span class="line">*/<span class="tag">&lt;/<span class="name">template</span>&gt;</span><span class="tag">&lt;<span class="name">template</span> <span class="attr">autoinsert</span>=<span class="string">"false"</span> <span class="attr">context</span>=<span class="string">"settercomment_context"</span> <span class="attr">deleted</span>=<span class="string">"false"</span> <span class="attr">description</span>=<span class="string">"Comment for setter method"</span> <span class="attr">enabled</span>=<span class="string">"true"</span> <span class="attr">id</span>=<span class="string">"org.eclipse.jdt.ui.text.codetemplates.settercomment"</span> <span class="attr">name</span>=<span class="string">"settercomment"</span>&gt;</span>/**</span><br><span class="line"> * @param $&#123;param&#125; the $&#123;bare_field_name&#125; to set</span><br><span class="line"> */<span class="tag">&lt;/<span class="name">template</span>&gt;</span><span class="tag">&lt;/<span class="name">templates</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加comments 快捷键     <code>command+option+j</code></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/05/笔记-语言-javase/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/05/笔记-语言-javase/" itemprop="url">笔记 后端 javase</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-05T17:01:43+08:00">
+                2018-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/笔记-前端-sass/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/03/01/笔记-前端-sass/" itemprop="url">笔记 前端 sass</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-01T15:09:09+08:00">
+                2018-03-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/" itemprop="url" rel="index">
+                    <span itemprop="name">笔记</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/笔记/前端/sass/" itemprop="url" rel="index">
+                    <span itemprop="name">sass</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h1><h2 id="变量规则"><a href="#变量规则" class="headerlink" title="变量规则"></a>变量规则</h2><ol>
+<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$nav-color: #F90;</span><br><span class="line">nav &#123;</span><br><span class="line">  $width: 100px;</span><br><span class="line">  width: $width;</span><br><span class="line">  color: $nav-color;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//编译后</span><br><span class="line"></span><br><span class="line">nav &#123;</span><br><span class="line">  width: 100px;</span><br><span class="line">  color: #F90;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>​</p>
+</li>
+<li><p>​</p>
+</li>
+<li><p>​</p>
+</li>
+</ol>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/25/笔记-前端-canvas/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1562,477 +1977,6 @@ chmod o-w 文件名  //给其让人删除写入权限
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/Mac的全部环境配置从零到满足/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/02/Mac的全部环境配置从零到满足/" itemprop="url">Mac的全部环境配置从零到满足</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T19:12:21+08:00">
-                2018-02-02
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/Mac/" itemprop="url" rel="index">
-                    <span itemprop="name">Mac</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Mac的全部环境装到你欲仙欲死</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/02/Mac的全部环境配置从零到满足/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/01/Windows下nvm,node,npm安装和使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/01/Windows下nvm,node,npm安装和使用/" itemprop="url">Windows下nvm,node,npm安装和使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T00:00:00+08:00">
-                2018-02-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/Windows/" itemprop="url" rel="index">
-                    <span itemprop="name">Windows</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>windows下nvm，node，npm的安装配置</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/01/Windows下nvm,node,npm安装和使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/01/Windows下git和ssh的安装和使用/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/01/Windows下git和ssh的安装和使用/" itemprop="url">Windows下git和ssh的安装和使用</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T00:00:00+08:00">
-                2018-02-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
-                    <span itemprop="name">教程</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/Windows/" itemprop="url" rel="index">
-                    <span itemprop="name">Windows</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>windows安装git和ssh key配置的方法</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/01/Windows下git和ssh的安装和使用/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2083,7 +2027,7 @@ chmod o-w 文件名  //给其让人删除写入权限
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">31</span>
+                <span class="site-state-item-count">34</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
