@@ -270,6 +270,410 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/15/笔记-前端-JavaScript-原生ajax/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/15/笔记-前端-JavaScript-原生ajax/" itemprop="url">笔记-前端-JavaScript-原生ajax</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-15T09:31:03+08:00">
+                2018-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="原理以及原生代码"><a href="#原理以及原生代码" class="headerlink" title="原理以及原生代码"></a>原理以及原生代码</h1><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> url = <span class="string">""</span>;</span><br><span class="line"><span class="comment">//创建ajax对象</span></span><br><span class="line"><span class="keyword">let</span> xmlHttp = <span class="keyword">new</span> XMLHttpRequest();</span><br><span class="line"><span class="comment">//开启数据通道('请求方式','带参url','是否异步')</span></span><br><span class="line">xmlHttp.open(<span class="string">'GET'</span>,url,<span class="literal">true</span>);</span><br><span class="line"><span class="comment">//提交请求(参数)</span></span><br><span class="line">xmlHttp.send(<span class="literal">null</span>);</span><br><span class="line"><span class="comment">//监听数据通道变化</span></span><br><span class="line">xmlHttp.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    xmlHttp.readyState(XMLHTTP通道状态码)</span></span><br><span class="line"><span class="comment">    	0－未初始化，即尚未调用 open。</span></span><br><span class="line"><span class="comment">		1－初始化，即尚未调用 send。</span></span><br><span class="line"><span class="comment">		2－发送数据，即已经调用 send。</span></span><br><span class="line"><span class="comment">		3－数据传送中。</span></span><br><span class="line"><span class="comment">		4－完成。</span></span><br><span class="line"><span class="comment">    xmlHttp.status(HTTP服务器状态码)</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    <span class="keyword">if</span>(xmlHttp.readyState == <span class="number">4</span> &amp;&amp; xmlHttp.status == <span class="number">200</span>)&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="built_in">JSON</span>.parse(xmlHttp.response));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Promise封装原生Ajax"><a href="#Promise封装原生Ajax" class="headerlink" title="Promise封装原生Ajax"></a>Promise封装原生Ajax</h1><p><code>GET</code></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getJSON</span>(<span class="params">url</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest()</span><br><span class="line">        xhr.open(<span class="string">'GET'</span>, url, <span class="literal">true</span>)</span><br><span class="line">        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">this</span>.readyState === <span class="number">4</span>) &#123;</span><br><span class="line">                <span class="keyword">if</span>(<span class="keyword">this</span>.status === <span class="number">200</span>) &#123;</span><br><span class="line">                		<span class="comment">//用jquery转成对象</span></span><br><span class="line">                    resolve($.parseJSON(<span class="keyword">this</span>.responseText), <span class="keyword">this</span>)</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">var</span> resJson = &#123; <span class="attr">code</span>: <span class="keyword">this</span>.status, <span class="attr">response</span>: <span class="keyword">this</span>.response &#125;</span><br><span class="line">                    reject(resJson, <span class="keyword">this</span>)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        xhr.send()</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>POST</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function postJSON(url, data) &#123;</span><br><span class="line">    return new Promise( (resolve, reject) =&gt; &#123;</span><br><span class="line">        var xhr = new XMLHttpRequest()</span><br><span class="line">        xhr.open(&quot;POST&quot;, url, true)</span><br><span class="line">        xhr.setRequestHeader(&quot;Content-type&quot;, &quot;application/x-www-form-urlencoded&quot;);</span><br><span class="line">        xhr.onreadystatechange = function () &#123;</span><br><span class="line">            if (this.readyState === 4) &#123;</span><br><span class="line">                if (this.status === 200) &#123;</span><br><span class="line">                    resolve(JSON.parse(this.responseText), this)</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    var resJson = &#123; code: this.status, response: this.response &#125;</span><br><span class="line">                    reject(resJson, this)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        xhr.send(JSON.stringify(data))</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p># </p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/10/教程-小程序-关于腾讯地图api的使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Sotyoyo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sotyoyo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/04/10/教程-小程序-关于腾讯地图api的使用/" itemprop="url">教程 小程序 关于腾讯地图api的使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-10T21:19:37+08:00">
+                2018-04-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="qqmap-wx-jssdk"><a href="#qqmap-wx-jssdk" class="headerlink" title="qqmap_wx_jssdk"></a>qqmap_wx_jssdk</h1><ol>
+<li><p>申请开发者密钥（key）：<a href="http://lbs.qq.com/key.html" target="_blank" rel="noopener">申请密钥</a></p>
+</li>
+<li><p>下载微信小程序JavaScriptSDK，<a href="http://3gimg.qq.com/lightmap/xcx/jssdk/qqmap-wx-jssdk1.0.zip" target="_blank" rel="noopener">微信小程序JavaScriptSDK v1.0</a></p>
+</li>
+<li><p>安全域名设置，需要在微信公众平台<a href="https://mp.weixin.qq.com/wxopen/devprofile?action=get_profile&amp;token=618217160&amp;lang=zh_CN" target="_blank" rel="noopener">https://mp.weixin.qq.com/wxopen/devprofile?action=get_profile&amp;token=618217160&amp;lang=zh_CN</a></p>
+<ul>
+<li>设置-开发设置-服务器域名-request合法域名-添加域名地址<a href="https://apis.map.qq.com" target="_blank" rel="noopener">https://apis.map.qq.com</a></li>
+</ul>
+</li>
+<li><p>引入JavaScriptSDK.js到utils文件夹</p>
+</li>
+<li><p>在需要引用的地方调用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">//app.js</span><br><span class="line">var qqmapsdk;</span><br><span class="line">/**</span><br><span class="line"> * WeChat API 模块</span><br><span class="line"> * @type &#123;Object&#125;</span><br><span class="line"> * 用于将微信官方`API`封装为`Promise`方式</span><br><span class="line"> * &gt; 小程序支持以`CommonJS`规范组织代码结构</span><br><span class="line"> */</span><br><span class="line">const wechat = require(&apos;./utils/wechat.js&apos;)</span><br><span class="line">/**</span><br><span class="line"> * QQ API 模块</span><br><span class="line"> * @type &#123;Object&#125;</span><br><span class="line"> * 用于调用腾讯的地理位置API</span><br><span class="line"> */</span><br><span class="line">const QQMapWX = require(&apos;./utils/qqmap-wx-jssdk.js&apos;)</span><br><span class="line"></span><br><span class="line">App(&#123;</span><br><span class="line">  onLaunch: function () &#123;</span><br><span class="line">    // 实例化腾讯地图API核心类  </span><br><span class="line">    qqmapsdk = new QQMapWX(&#123;</span><br><span class="line">      key: &apos;BYCBZ-PWMHS-PRBOA-6MTOP-XZRAF-5JBLY&apos;//此处使用你自己申请的key  </span><br><span class="line">    &#125;);</span><br><span class="line">    wechat.getLocation().then(res =&gt; &#123;</span><br><span class="line">          const &#123; latitude, longitude &#125; = res</span><br><span class="line">          qqmapsdk.reverseGeocoder(&#123;</span><br><span class="line">            location: &#123; latitude, longitude &#125;,</span><br><span class="line">            success: res =&gt; &#123;</span><br><span class="line">              console.log(&quot;你的地理位置:\n&quot; + res.result.address);</span><br><span class="line">            &#125;,</span><br><span class="line">            fail: res =&gt; &#123;</span><br><span class="line">              console.log(res);</span><br><span class="line">            &#125;</span><br><span class="line">          &#125;)</span><br><span class="line">        &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h1 id="App-json"><a href="#App-json" class="headerlink" title="App.json"></a>App.json</h1><p>官方文档： <a href="https://developers.weixin.qq.com/miniprogram/dev/framework/config.html" target="_blank" rel="noopener">https://developers.weixin.qq.com/miniprogram/dev/framework/config.html</a></p>
+<h2 id="tabbar"><a href="#tabbar" class="headerlink" title="tabbar"></a>tabbar</h2><p><code>tabBar</code>相关属性定义说明：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>必填</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 上的文字默认颜色</td>
+</tr>
+<tr>
+<td>selectedColor</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 上的文字选中时的颜色</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>HexColor</td>
+<td>是</td>
+<td></td>
+<td>tab 的背景色</td>
+</tr>
+<tr>
+<td>borderStyle</td>
+<td>String</td>
+<td>否</td>
+<td>black</td>
+<td>tabbar上边框的颜色， 仅支持 black/white</td>
+</tr>
+<tr>
+<td>list</td>
+<td>Array</td>
+<td>是</td>
+<td></td>
+<td>tab 的列表，详见 list 属性说明，最少2个、最多5个 tab</td>
+</tr>
+<tr>
+<td>position</td>
+<td>String</td>
+<td>否</td>
+<td>bottom</td>
+<td>可选值 bottom、top</td>
+</tr>
+</tbody>
+</table>
+<p>tabBar list定义说明：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pagePath</td>
+<td>String</td>
+<td>是</td>
+<td>页面路径，必须在 pages 中先定义</td>
+</tr>
+<tr>
+<td>text</td>
+<td>String</td>
+<td>是</td>
+<td>tab 上按钮文字</td>
+</tr>
+<tr>
+<td>iconPath</td>
+<td>String</td>
+<td>是</td>
+<td>图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px</td>
+</tr>
+<tr>
+<td>selectedIconPath</td>
+<td>String</td>
+<td>是</td>
+<td>选中时的图片路径，icon 大小限制为40kb，建议尺寸为 81px * 81px</td>
+</tr>
+</tbody>
+</table>
+<p>tabBar 是一个数组，只能配置<strong>最少2个、最多5个 tab</strong>，tab 按数组的顺序排序。</p>
+<h2 id="window"><a href="#window" class="headerlink" title="window"></a>window</h2><p><code>window</code>中的样式说明：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>默认值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>navigationBarBackgroundColor</td>
+<td>HexColor</td>
+<td>000000 导航栏背景颜色，如”#000000”</td>
+<td></td>
+</tr>
+<tr>
+<td>navigationBarTextStyle</td>
+<td>String</td>
+<td>white</td>
+<td>导航栏标题颜色，仅支持 black/white</td>
+</tr>
+<tr>
+<td>navigationBarTitleText</td>
+<td>String</td>
+<td></td>
+<td>导航栏标题文字内容</td>
+</tr>
+<tr>
+<td>backgroundColor</td>
+<td>HexColor</td>
+<td><code>#ffffff</code></td>
+<td>窗口的背景色</td>
+</tr>
+<tr>
+<td>backgroundTextStyle</td>
+<td>String</td>
+<td>dark</td>
+<td>下拉背景字体、loading 图的样式，仅支持 dark/light</td>
+</tr>
+<tr>
+<td>enablePullDownRefresh</td>
+<td>Boolean</td>
+<td>false</td>
+<td>是否开启下拉刷新</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/笔记-前端-JavaScript/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1617,419 +2021,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/12/笔记-前端-JavaScript-项目积累/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/12/笔记-前端-JavaScript-项目积累/" itemprop="url">笔记 前端 JavaScript 项目积累</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-12T16:30:42+08:00">
-                2018-03-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="window对象"><a href="#window对象" class="headerlink" title="window对象"></a>window对象</h2><ol>
-<li><p><strong>window.location</strong></p>
-<p>| 属性     | 描述                              |<br>| ——– | ——————————— |<br>| hash     | 从井号 (#) 开始的 URL（锚）       |<br>| host     | 主机名和当前 URL 的端口号         |<br>| hostname | 当前 URL 的主机名                 |<br>| href     | 完整的 URL                        |<br>| pathname | 当前 URL 的路径部分               |<br>| port     | 当前 URL 的端口号                 |<br>| protocol | 当前 URL 的协议                   |<br>| search   | 从问号 (?) 开始的 URL（查询部分） |</p>
-</li>
-</ol>
-<p>应用：(<code>&quot;https://www.baidu.com?id=111&amp;name=222&quot;</code>)</p>
-<ul>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//获取到get请求的参数</span></span><br><span class="line"><span class="keyword">let</span> url = <span class="built_in">window</span>.location.search;</span><br><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line"><span class="keyword">let</span> reg = <span class="regexp">/[?&amp;][^?&amp;]+=[^?&amp;]+/g</span>;</span><br><span class="line"><span class="keyword">let</span> arr = url.match(reg);								<span class="comment">//['?id=111','&amp;name=222']</span></span><br><span class="line"><span class="keyword">if</span> (arr) &#123;</span><br><span class="line">    arr.forEach(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> tempArr = item.substring(<span class="number">1</span>).split(<span class="string">'='</span>);</span><br><span class="line">        <span class="comment">//将每个数组内容 拆分成一个新的数组，这个新的数组 [参数名,参数值]</span></span><br><span class="line">      <span class="keyword">let</span> key = <span class="built_in">decodeURIComponent</span>(tempArr[<span class="number">0</span>]);</span><br><span class="line">      <span class="keyword">let</span> val = <span class="built_in">decodeURIComponent</span>(tempArr[<span class="number">1</span>]);</span><br><span class="line">      obj[key] = val;</span><br><span class="line">        <span class="comment">//构造成一个对象</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>​</p>
-</li>
-</ul>
-<h1 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h1><ol>
-<li><strong>event对象</strong></li>
-</ol>
-<h1 id="ES3-API"><a href="#ES3-API" class="headerlink" title="ES3 API"></a>ES3 API</h1><ol>
-<li>Object.assign(obj,obj1,obj2)</li>
-</ol>
-<p>   <code>将所有可枚举属性的值从多个源对象复制到目标对象,若两者的属性名有冲突，后面的将会覆盖前面的。它将返回目标对象</code></p>
-<p>   用处：</p>
-<ul>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//为对象添加多个方法</span></span><br><span class="line"><span class="built_in">Object</span>.assign(SomeClass.prototype, &#123;</span><br><span class="line">  someMethod(arg1, arg2) &#123;</span><br><span class="line">  &#125;,</span><br><span class="line">  anotherMethod() &#123;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 原来的方法</span></span><br><span class="line">SomeClass.prototype.someMethod = <span class="function"><span class="keyword">function</span> (<span class="params">arg1, arg2</span>) </span>&#123;&#125;;</span><br><span class="line">SomeClass.prototype.anotherMethod = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Object</span>.assign(</span><br><span class="line">	&#123;&#125;,</span><br><span class="line">	Zan.Field,</span><br><span class="line">	&#123;</span><br><span class="line">		data:&#123;&#125;</span><br><span class="line">	&#125;</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<ol>
-<li><p>Object.keys()</p>
-<p><code>返回键名数组</code></p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 1. 数组</span></span><br><span class="line"><span class="keyword">let</span> arr = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>];</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(arr));</span><br><span class="line"><span class="comment">// (3) ['0', '1', '2']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 2. 类数组对象</span></span><br><span class="line"><span class="keyword">let</span> anObj = &#123; <span class="number">100</span>: <span class="string">'a'</span>, <span class="number">2</span>: <span class="string">'b'</span>, <span class="number">7</span>: <span class="string">'c'</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(anObj));</span><br><span class="line"><span class="comment">// (3) ['2', '7', '100']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 3. 一般对象</span></span><br><span class="line"><span class="keyword">let</span> xyz = &#123;<span class="attr">z</span>: <span class="string">"zzz"</span>, <span class="attr">x</span>: <span class="string">"xxx"</span>, <span class="attr">y</span>: <span class="string">"yyy"</span>&#125;;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.keys(xyz));</span><br><span class="line"><span class="comment">// (3) ["z", "x", "y"]</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>JSON.stringfy() &amp; JSON.parse()</p>
-</li>
-</ol>
-<h1 id="Array对象"><a href="#Array对象" class="headerlink" title="Array对象"></a>Array对象</h1><ol>
-<li><p>类数组转换成数组</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="built_in">Array</span>.prototype.slice.call(array_like,<span class="number">0</span>);</span><br><span class="line"><span class="number">2.</span> &lt;ES6&gt;<span class="built_in">Array</span>.from(array_like);<span class="comment">//只要是可迭代即可 'foo'=&gt; ['f','o','o']</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p><code>concat()</code> 方法用于合并两个或多个数组。不会更改现有数组，而是返回一个新数组。</p>
-</li>
-<li><p><code>includes()</code> <code>ES6</code>方法用来判断一个数组是否包含一个指定的值，根据情况，如果包含则返回 true，否则返回false。</p>
-</li>
-<li><p><code>indexOf()</code>方法返回在数组中可以找到一个给定元素的第一个索引，如果不存在，则返回-1。</p>
-</li>
-<li><p><code>join()</code> 方法将一个数组（或一个<a href="https://developer.mozilla.org/zh-CN//docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects" target="_blank" rel="noopener">类数组对象</a>）的所有元素连接成一个字符串并返回这个字符串。不会更改原数组。</p>
-</li>
-<li><p><code>lastIndexOf()</code> 方法返回指定元素（也即有效的 JavaScript 值或变量）在数组中的最后一个的索引，如果不存在则返回 -1。从数组的后面向前查找，从 <code>fromIndex</code> 处开始。</p>
-</li>
-<li><p><code>map()</code> <code>es6</code> 方法创建一个新数组，其结果是该数组中的每个元素都调用一个提供的函数后返回的结果。</p>
-</li>
-<li><p><code>reduce()</code> 方法对累加器和数组中的每个元素（从左到右）应用一个函数，将其减少为单个值。</p>
-</li>
-</ol>
-<h1 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h1><ol>
-<li>遍历<ul>
-<li><a href="https://www.cnblogs.com/yangshifu/p/7377102.html#for" target="_blank" rel="noopener">原生for循环、for-in及forEach</a></li>
-<li><a href="https://www.cnblogs.com/yangshifu/p/7377102.html#for-of" target="_blank" rel="noopener">ES6 for-of方法遍历类数组集合</a></li>
-<li><a href="https://www.cnblogs.com/yangshifu/p/7377102.html#object.key" target="_blank" rel="noopener">Object.key()返回键名的集合</a></li>
-<li><a href="https://www.cnblogs.com/yangshifu/p/7377102.html#jquery" target="_blank" rel="noopener">jQuery的$.each()</a></li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/08/笔记-前端-JavaScript-犀牛书/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Sotyoyo">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sotyoyo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/08/笔记-前端-JavaScript-犀牛书/" itemprop="url">笔记 前端 JavaScript 犀牛书</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-08T14:36:58+08:00">
-                2018-03-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="语言核心"><a href="#语言核心" class="headerlink" title="语言核心"></a>语言核心</h1><h2 id="字符集"><a href="#字符集" class="headerlink" title="字符集"></a>字符集</h2><ol>
-<li><p>用 unicode字符集编写，unicode是ASCII和Latin-1的超集</p>
-</li>
-<li><p>区分大小写，html的标签和属性在js中必须是小写</p>
-</li>
-<li><p>注释</p>
-<ul>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">行尾 <span class="comment">//行尾注释</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">*	段落注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-</li>
-<li><p>可选分号（如果语句单独成行，可省略分号，只有在缺少分号无法正常解析的时候，javascript会自动填补分号），在遇到 ()[]单独成行的时候，要注意是否和上一行组成了一个函数，所以最好添加分号。</p>
-</li>
-<li><p>javascript解释器有自己的内存管理机制，可以自动对内存进行垃圾回收。</p>
-</li>
-</ol>
-<h2 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h2><ol>
-<li><p>javascript变量是无类型的，采用词法作用域，所有数字都用64位的浮点格式表示，范围是 ：           最大 ± 1.797… <em> 10^308 ; 最小 ± 5 </em> 10 ^ -324</p>
-</li>
-<li><p>ECMAScript 不支持八进制直接量，ES6 严格模式下 明令禁止。</p>
-</li>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Math</span>.pow(x,y)			<span class="comment">//x的y次幂</span></span><br><span class="line"><span class="built_in">Math</span>.round(<span class="number">.6</span>) 			<span class="comment">// 四舍五入方法</span></span><br><span class="line"><span class="built_in">Math</span>.ceil(x)			<span class="comment">//向上求整			</span></span><br><span class="line"><span class="built_in">Math</span>.floor(x)			<span class="comment">//向下求整</span></span><br><span class="line"><span class="built_in">Math</span>.abs(x)				<span class="comment">//求绝对值</span></span><br><span class="line"><span class="built_in">Math</span>.max(x,y,z)			<span class="comment">//返回最大值</span></span><br><span class="line"><span class="built_in">Math</span>.min(x,y,z)			<span class="comment">//返回最小值</span></span><br><span class="line"><span class="built_in">Math</span>.random()			<span class="comment">//[0,1) 的伪随机数</span></span><br><span class="line"><span class="built_in">Math</span>.PI					<span class="comment">//π</span></span><br><span class="line"><span class="built_in">Math</span>.E					<span class="comment">//自然对数的底数e</span></span><br><span class="line"><span class="built_in">Math</span>.sqrt(x)			<span class="comment">//x的平方根</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">Infinity</span> 		正无穷大	<span class="number">1</span>/<span class="number">0</span>  等于 正无穷大</span><br><span class="line">-<span class="literal">Infinity</span> 		负无穷大	<span class="number">-1</span>/<span class="number">0</span> 等于 负无穷大</span><br><span class="line"><span class="literal">NaN</span>			    无法运算的情况下返回<span class="literal">NaN</span> <span class="number">0</span>/<span class="number">0</span> </span><br><span class="line">下溢 返回 <span class="number">0</span> / <span class="number">-0</span>  意识是超出了最小表示范围</span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">undefined</span></span><br><span class="line"><span class="literal">null</span></span><br><span class="line"><span class="literal">NaN</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">-0</span></span><br><span class="line"><span class="string">""</span></span><br><span class="line"><span class="comment">//这些转换为布尔值以后都是false</span></span><br><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span> <span class="comment">//true</span></span><br><span class="line"><span class="literal">null</span> === <span class="literal">undefined</span> <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">全局属性	[<span class="literal">undefined</span>,<span class="literal">Infinity</span>,<span class="literal">NaN</span>]</span><br><span class="line">全局函数	[<span class="built_in">isNaN</span>(),<span class="built_in">parseInt</span>(),<span class="built_in">eval</span>()]</span><br><span class="line">构造函数	[<span class="built_in">Date</span>(),<span class="built_in">RegExp</span>(),Stirng(),<span class="built_in">Object</span>(),<span class="built_in">Array</span>()]</span><br><span class="line">全局对象	[<span class="built_in">Math</span>,<span class="built_in">JSON</span>]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>在客户端JS中，window即全局对象。</p>
-</li>
-<li><p>函数作用域和声明提前</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">javascript 中的作用域不是块级作用域(用花括号包围)，而是函数作用域(函数块包围)，js里面的变量声明，有声明提前，即把声明语句置顶，赋值顺序不变，保留原位：</span><br><span class="line">	<span class="built_in">console</span>.log(a);</span><br><span class="line">	<span class="keyword">var</span> a = <span class="string">"scope"</span>;</span><br><span class="line">	</span><br><span class="line">	相当于：</span><br><span class="line">	<span class="keyword">var</span> a;</span><br><span class="line">	<span class="built_in">console</span>.log(a);</span><br><span class="line">	a = <span class="string">"scope"</span>;</span><br></pre></td></tr></table></figure>
-<p>​</p>
-</li>
-<li><p>js七种数据类型：<code>String</code>  <code>Object</code> <code>null</code>  <code>undefined</code>  <code>Array</code>  <code>Boolean</code>  <code>Number</code><br>js五种基本类型：<code>String</code> <code>Boolean</code> <code>Number</code> <code>null</code> <code>undefined</code><br>typeof六种返回格式：<code>&#39;string&#39;</code> <code>&#39;number&#39;</code>  <code>&#39;object&#39;</code> <code>&#39;function&#39;</code>  <code>&#39;boolean&#39;</code>  <code>&#39;undefined&#39;</code></p>
-</li>
-<li><p>Array对象常用方法中：</p>
-<p>一、 不改变原数组：</p>
-<p>1、 concat()</p>
-<ul>
-<li>连接两个或多个数组</li>
-<li><strong>不改变原数组</strong></li>
-<li>返回被连接数组的一个副本</li>
-</ul>
-<p>2、join()</p>
-<ul>
-<li>把数组中所有元素放入一个字符串</li>
-<li><strong>不改变原数组</strong></li>
-<li>返回字符串</li>
-</ul>
-<p>3、 slice()</p>
-<ul>
-<li>从已有的数组中返回选定的元素</li>
-<li><strong>不改变原数组</strong></li>
-<li>返回一个新数组</li>
-</ul>
-<p>4、 toString()</p>
-<ul>
-<li>把数组转为字符串</li>
-<li><strong>不改变原数组</strong></li>
-<li>返回数组的字符串形式</li>
-</ul>
-<p>二、改变原数组：</p>
-<p>5、 pop()</p>
-<ul>
-<li><p>删除数组最后一个元素，如果数组为空，则不改变数组，返回undefined</p>
-</li>
-<li><p>改变原数组</p>
-</li>
-<li><p>返回被删除的元素</p>
-</li>
-</ul>
-<p>6、 push()</p>
-<ul>
-<li>向数组末尾添加一个或多个元素</li>
-<li>改变原数组</li>
-<li>返回新数组的长度</li>
-</ul>
-<p>7、 reverse()</p>
-<ul>
-<li>颠倒数组中元素的顺序</li>
-<li>改变原数组</li>
-<li>返回该数组</li>
-</ul>
-<p>8、 shift()</p>
-<ul>
-<li>把数组的第一个元素删除，若空数组，不进行任何操作，返回undefined</li>
-<li>改变原数组</li>
-<li>返回第一个元素的值</li>
-</ul>
-<p>9、 sort()</p>
-<ul>
-<li>对数组元素进行排序(ascii)</li>
-<li>改变原数组</li>
-<li>返回该数组</li>
-</ul>
-<p>10、 splice()</p>
-<ul>
-<li>从数组中添加/删除项目</li>
-<li>改变原数组</li>
-<li>返回被删除的元素</li>
-</ul>
-<p>11、 unshift()</p>
-<ul>
-<li>向数组的开头添加一个或多个元素</li>
-<li>改变原数组</li>
-<li>返回新数组的长度</li>
-</ul>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2080,7 +2071,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">34</span>
+                <span class="site-state-item-count">36</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
