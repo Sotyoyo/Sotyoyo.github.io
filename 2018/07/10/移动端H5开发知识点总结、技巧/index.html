@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="Sotyoyo">
 <meta property="og:description" content="开发流程针对布局、窗口、字体大小 meta标签 窗口大小=设备宽度，禁止用户缩放 1&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0&quot; /&amp;gt;  rem的解决设备宽度、dpr不一致（淘宝方案）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-07-11T05:10:25.000Z">
+<meta property="og:updated_time" content="2018-07-31T07:10:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="移动端H5开发知识点总结、技巧">
 <meta name="twitter:description" content="开发流程针对布局、窗口、字体大小 meta标签 窗口大小=设备宽度，禁止用户缩放 1&amp;lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0&quot; /&amp;gt;  rem的解决设备宽度、dpr不一致（淘宝方案）">
@@ -368,6 +368,237 @@
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>移动端开发<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--条件注释：针对IE处理，大小写或者其它语法必须严格按照下面写法--&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--[if lt IE 9]&gt;</span></span><br><span class="line"><span class="comment">    &lt;script src="https://cdn.bootcss.com/html5shiv/r29/html5.min.js"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="comment">    &lt;![endif]--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">nav</span> <span class="attr">class</span>=<span class="string">"navBox"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
+<h2 id="Mongodb-connection-failed通用解决方案"><a href="#Mongodb-connection-failed通用解决方案" class="headerlink" title="Mongodb connection failed通用解决方案"></a>Mongodb connection failed通用解决方案</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/lib/mongodb/mongod.lock </span><br><span class="line">sudo rm -rf /var/lib/mongodb/_tmp</span><br><span class="line">sudo mongod -repair</span><br><span class="line">sudo /etc/init.d/mongodb restart</span><br></pre></td></tr></table></figure>
+<h2 id="Vue-router-路由刷新默认不触发-Vue的生命周期函数"><a href="#Vue-router-路由刷新默认不触发-Vue的生命周期函数" class="headerlink" title="Vue-router 路由刷新默认不触发 Vue的生命周期函数"></a>Vue-router 路由刷新默认不触发 Vue的生命周期函数</h2><p>解决方法1: <code>在router-view上加上一个唯一的key</code>，来保证路由切换时都会重新渲染触发钩子。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-view :key=&quot;key&quot;&gt;&lt;/router-view&gt;</span><br><span class="line">computed: &#123;</span><br><span class="line">    key() &#123;</span><br><span class="line"> 	  return</span><br><span class="line">        this.$route.name !== undefined ?</span><br><span class="line">        this.$route.name + +new Date(): </span><br><span class="line">        this.$route + +new Date() ;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>解决发放2: <code>watch路由对象</code>是否发生了变化,触发钩子函数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">data()&#123;</span><br><span class="line">...</span><br><span class="line">&#125;</span><br><span class="line">mounted()&#123;...&#125;,</span><br><span class="line">watch: &#123;</span><br><span class="line">    //监听路由，只要路由有变化(路径，参数等变化)都有执行下面的函数</span><br><span class="line">    $route: &#123;</span><br><span class="line">        handler: function (val, oldVal) &#123;</span><br><span class="line">        &#125;,</span><br><span class="line">        deep: true</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+<h2 id="Animation"><a href="#Animation" class="headerlink" title="Animation"></a>Animation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">animation: name duration timing-function delay iteration-count direction fill-mode play-state;</span><br></pre></td></tr></table></figure>
+<p>animation-name: <em>keyframename</em>|none;</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>keyframename</em></td>
+<td>指定要绑定到选择器的关键帧的名称</td>
+</tr>
+<tr>
+<td>none</td>
+<td>指定有没有动画（可用于覆盖从级联的动画）</td>
+</tr>
+</tbody>
+</table>
+<p>animation-duration: <em>time</em>;</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>time</em></td>
+<td>指定动画播放完成花费的时间。默认值为 0，意味着没有动画效果。</td>
+</tr>
+</tbody>
+</table>
+<p>animation-timing-function: <em>value</em>;</p>
+<p>animation-timing-function使用的数学函数，称为三次贝塞尔曲线，速度曲线。使用此函数，您可以使用您自己的值，或使用预先定义的值之一：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+<th>测试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>linear</td>
+<td>动画从头到尾的速度是相同的。</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=animation-timing-function&amp;preval=linear" target="_blank" rel="noopener">测试</a></td>
+</tr>
+<tr>
+<td>ease</td>
+<td>默认。动画以低速开始，然后加快，在结束前变慢。</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=animation-timing-function&amp;preval=ease" target="_blank" rel="noopener">测试</a></td>
+</tr>
+<tr>
+<td>ease-in</td>
+<td>动画以低速开始。</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=animation-timing-function&amp;preval=ease-in" target="_blank" rel="noopener">测试</a></td>
+</tr>
+<tr>
+<td>ease-out</td>
+<td>动画以低速结束。</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=animation-timing-function&amp;preval=ease-out" target="_blank" rel="noopener">测试</a></td>
+</tr>
+<tr>
+<td>ease-in-out</td>
+<td>动画以低速开始和结束。</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=animation-timing-function&amp;preval=ease-in-out" target="_blank" rel="noopener">测试</a></td>
+</tr>
+<tr>
+<td>cubic-bezier(<em>n</em>,<em>n</em>,<em>n</em>,<em>n</em>)</td>
+<td>在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值。</td>
+</tr>
+</tbody>
+</table>
+<p>animation-delay: <em>time</em>;</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+<th>测试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>time</em></td>
+<td>可选。定义动画开始前等待的时间，以秒或毫秒计。默认值为0</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=animation-delay&amp;preval=1s" target="_blank" rel="noopener">测试 »</a></td>
+</tr>
+</tbody>
+</table>
+<p>animation-iteration-count: <em>value</em>;</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+<th>测试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>n</em></td>
+<td>一个数字，定义应该播放多少次动画</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=animation-iteration-count&amp;preval=1" target="_blank" rel="noopener">测试 »</a></td>
+</tr>
+<tr>
+<td>infinite</td>
+<td>指定动画应该播放无限次（永远）</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=animation-iteration-count&amp;preval=infinite" target="_blank" rel="noopener">测试 »</a></td>
+</tr>
+</tbody>
+</table>
+<p>animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+<th>测试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>normal</td>
+<td>默认值。动画按正常播放。</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=playcss_animation-direction&amp;preval=normal" target="_blank" rel="noopener">测试 »</a></td>
+</tr>
+<tr>
+<td>reverse</td>
+<td>动画反向播放。</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=playcss_animation-direction&amp;preval=reverse" target="_blank" rel="noopener">测试 »</a></td>
+</tr>
+<tr>
+<td>alternate</td>
+<td>动画在奇数次（1、3、5…）正向播放，在偶数次（2、4、6…）反向播放。</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=playcss_animation-direction&amp;preval=alternate" target="_blank" rel="noopener">测试 »</a></td>
+</tr>
+<tr>
+<td>alternate-reverse</td>
+<td>动画在奇数次（1、3、5…）反向播放，在偶数次（2、4、6…）正向播放。</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=playcss_animation-direction&amp;preval=alternate-reverse" target="_blank" rel="noopener">测试 »</a></td>
+</tr>
+<tr>
+<td>initial</td>
+<td>设置该属性为它的默认值。请参阅 <a href="http://www.runoob.com/cssref/css-initial.html" target="_blank" rel="noopener"><em>initial</em></a>。</td>
+<td></td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>从父元素继承该属性。请参阅 <a href="http://www.runoob.com/cssref/css-inherit.html" target="_blank" rel="noopener"><em>inherit</em></a>。</td>
+</tr>
+</tbody>
+</table>
+<p>animation-fill-mode: none|forwards|backwards|both|initial|inherit;</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>none</td>
+<td>默认值。动画在动画执行之前和之后不会应用任何样式到目标元素。</td>
+</tr>
+<tr>
+<td>forwards</td>
+<td>在动画结束后（由 animation-iteration-count 决定），动画将应用该属性值。</td>
+</tr>
+<tr>
+<td>backwards</td>
+<td>动画将应用在 animation-delay 定义期间启动动画的第一次迭代的关键帧中定义的属性值。这些都是 from 关键帧中的值（当 animation-direction 为 “normal” 或 “alternate” 时）或 to 关键帧中的值（当 animation-direction 为 “reverse” 或 “alternate-reverse” 时）。</td>
+</tr>
+<tr>
+<td>both</td>
+<td>动画遵循 forwards 和 backwards 的规则。也就是说，动画会在两个方向上扩展动画属性。</td>
+</tr>
+<tr>
+<td>initial</td>
+<td>设置该属性为它的默认值。请参阅 <a href="http://www.runoob.com/cssref/css-initial.html" target="_blank" rel="noopener"><em>initial</em></a>。</td>
+</tr>
+<tr>
+<td>inherit</td>
+<td>从父元素继承该属性。请参阅 <a href="http://www.runoob.com/cssref/css-inherit.html" target="_blank" rel="noopener"><em>inherit</em></a>。</td>
+</tr>
+</tbody>
+</table>
+<p>animation-play-state: paused|running;</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>描述</th>
+<th>测试</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>paused</td>
+<td>指定暂停动画</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=animation-play-state&amp;preval=paused" target="_blank" rel="noopener">测试 »</a></td>
+</tr>
+<tr>
+<td>running</td>
+<td>指定正在运行的动画</td>
+<td><a href="http://www.runoob.com/try/playit.php?f=animation-play-state&amp;preval=running" target="_blank" rel="noopener">测试 »</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="Element-UI-注意事项"><a href="#Element-UI-注意事项" class="headerlink" title="Element-UI 注意事项"></a>Element-UI 注意事项</h2><ol>
+<li>覆盖自带样式,直接在<code>.vue</code>中 <code>style</code>覆盖原生的class选择器即可,注意 不能加<code>scoped</code>,所以最好在父Class限定当前元素.</li>
+<li><code>el-input</code> 实际分为两部分dom 外面是一个 class为<code>.el-input</code>的div,里面是一个<code>.el-input__inner</code>的<code>span</code>.</li>
+</ol>
+<h1 id="性能，调优"><a href="#性能，调优" class="headerlink" title="性能，调优"></a>性能，调优</h1><h2 id="压缩"><a href="#压缩" class="headerlink" title="压缩"></a>压缩</h2><ol>
+<li><p>字体文件压缩(fontspider)</p>
+<p>原理: 通过分析html中用到的字，删除 @font-face src下面的链接到的字体文件中没有用到的字体文件。</p>
+<p>使用方法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1. 安装全局gulp</span><br><span class="line">2. npm install font-spider gulp-font-spider --save-dev</span><br><span class="line">3. gulpfile.js</span><br><span class="line">   var gulp = require(&apos;gulp&apos;);</span><br><span class="line">   var fontSpider = require(&apos;gulp-font-spider&apos;);</span><br><span class="line">   gulp.task(&apos;fontspider&apos;, function() &#123;</span><br><span class="line">   return gulp.src(&apos;./index.html&apos;)</span><br><span class="line">       .pipe(fontSpider());</span><br><span class="line">   &#125;);</span><br><span class="line">    gulp.task(&apos;default&apos;, [&apos;fontspider&apos;]);</span><br><span class="line"> 4. gulp</span><br></pre></td></tr></table></figure>
+<p>​</p>
+</li>
+</ol>
 <h1 id="我的H5项目"><a href="#我的H5项目" class="headerlink" title="我的H5项目"></a>我的H5项目</h1>
       
     </div>
@@ -409,6 +640,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/17/笔记-前端-webpack-官方文档/" rel="prev" title="手撸一个webpack4搭建的vue项目雏形(Webpack4+Vue2+Vuex+Vue-Router)">
+                手撸一个webpack4搭建的vue项目雏形(Webpack4+Vue2+Vuex+Vue-Router) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -496,7 +731,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -507,7 +742,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">29</span>
+                <span class="site-state-item-count">27</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -542,7 +777,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开发流程"><span class="nav-number">1.</span> <span class="nav-text">开发流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#针对布局、窗口、字体大小"><span class="nav-number">1.1.</span> <span class="nav-text">针对布局、窗口、字体大小</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#采坑、解决"><span class="nav-number">2.</span> <span class="nav-text">采坑、解决</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#针对Html新规范"><span class="nav-number">2.1.</span> <span class="nav-text">针对Html新规范</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我的H5项目"><span class="nav-number">3.</span> <span class="nav-text">我的H5项目</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#开发流程"><span class="nav-number">1.</span> <span class="nav-text">开发流程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#针对布局、窗口、字体大小"><span class="nav-number">1.1.</span> <span class="nav-text">针对布局、窗口、字体大小</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#采坑、解决"><span class="nav-number">2.</span> <span class="nav-text">采坑、解决</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#针对Html新规范"><span class="nav-number">2.1.</span> <span class="nav-text">针对Html新规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mongodb-connection-failed通用解决方案"><span class="nav-number">2.2.</span> <span class="nav-text">Mongodb connection failed通用解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Vue-router-路由刷新默认不触发-Vue的生命周期函数"><span class="nav-number">2.3.</span> <span class="nav-text">Vue-router 路由刷新默认不触发 Vue的生命周期函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Animation"><span class="nav-number">2.4.</span> <span class="nav-text">Animation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Element-UI-注意事项"><span class="nav-number">2.5.</span> <span class="nav-text">Element-UI 注意事项</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#性能，调优"><span class="nav-number">3.</span> <span class="nav-text">性能，调优</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#压缩"><span class="nav-number">3.1.</span> <span class="nav-text">压缩</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#我的H5项目"><span class="nav-number">4.</span> <span class="nav-text">我的H5项目</span></a></li></ol></div>
             
 
           </div>
